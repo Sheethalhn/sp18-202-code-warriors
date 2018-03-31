@@ -2,11 +2,13 @@
 
 ## Team Members:
 
-Manisha Shivshette
-Rakhee Singh
-Saranya Soundar Rajan
-Sheethal Halandur Nagaraja
-Sravya Somisetty
+1. Manisha Shivshette
+2. Rakhee Singh
+3. Saranya Soundar Rajan
+4. Sheethal Halandur Nagaraja
+5. Sravya Somisetty
+
+BurnDown Chart: https://docs.google.com/spreadsheets/d/1LbN_SoAt0a4o_AEu9KCI6MCBqQ4C8MlCEqgSjGNqUWA/
 
 ## Week 1 (4/2/2017): Minutes of the meeting
 
