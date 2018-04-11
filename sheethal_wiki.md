@@ -1,0 +1,1 @@
+Week1 : 04/07/2018 -Had a team discussion regarding game ideas and all agreed upon implementing war style game with Blank Panther theme.Discussed regarding the levels and scope of our game for the sprint and decided on using greenfoot platform.Started with creating small demo games in greenfoot to understand platform better
