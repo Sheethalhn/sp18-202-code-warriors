@@ -26,8 +26,8 @@ public class MyWorld extends World
         hero = new Hero();
         scoreBoard =  new ScoreBoard();
         enemyObject = new EnemyObject();
-        textButton = new Switch("Click here to change to swordmode");
-        addObject(hero, 40, 200);
+        textButton = new Switch("SwitchMode");
+        addObject(hero, 100, 200);
         addObject(scoreBoard, 900, 35);
         addObject(textButton, 600, 35);
         scoreBoard.attach(hero);
@@ -44,18 +44,24 @@ public class MyWorld extends World
             addObject(enemyObject, 1200, 359);
         }
         if(textButton.gotClicked()) {
-            changeHeroMode();
+            changeHeroSwordMode();
         }
          
     }
     
-    public void changeHeroMode() {
+    public void changeHeroSwordMode() {
         heroWithSword = new HeroWithSword();
-        addObject(heroWithSword, 40, 200);
+        addObject(heroWithSword, 100, 200);
         removeObject(hero);
         scoreBoard.attach(heroWithSword);
         heroWithSword.registerObserver(scoreBoard);
-        heroWithSword.displayWeaponCount();
+    }
+    
+    public void changeHeroMode() {
+        addObject(hero, 100, 200);
+        removeObject(heroWithSword);
+        scoreBoard.attach(heroWithSword);
+        heroWithSword.registerObserver(scoreBoard);
     }
    
 }

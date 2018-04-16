@@ -14,6 +14,7 @@ public class ScoreBoard extends Actor implements IObserver
      */
     ISubject subject;
     private int score;
+    
     public ScoreBoard() {
         score = 0;
         //GreenfootImage scoreBoardImage = getImage();

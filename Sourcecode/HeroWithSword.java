@@ -30,14 +30,11 @@ public class HeroWithSword extends Hero implements ISubject
     @Override
     public void collectWeapons() {
        // EnemyObject enemyObject = (EnemyObject)getOneIntersectingObject(EnemyObject.class);
-        if(isTouching(EnemyObject.class))
-        {
-            MyWorld myWorld = (MyWorld)getWorld();
             weaponCount += 1;
-        }
         //if(enemyObject != null){
         //   weaponCount++;
         //}
+        displayWeaponCount();
     }
     
     @Override
