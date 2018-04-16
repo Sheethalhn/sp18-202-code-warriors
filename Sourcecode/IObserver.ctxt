@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=IObserver
+comment0.text=\n\ Write\ a\ description\ of\ class\ IObserver\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=subject
+comment1.target=void\ attach(ISubject)
+comment2.params=subject
+comment2.target=void\ detach(ISubject)
+numComments=3
