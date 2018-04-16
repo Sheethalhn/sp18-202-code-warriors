@@ -10,11 +10,10 @@ public class HeroWithSword extends Hero implements ISubject
 {
     IObserver observer;
     boolean isFighterMoved;
-    int weaponCount;
+    public int weaponCount;
     
     public HeroWithSword() {
         isFighterMoved = false;
-        weaponCount = 0;
     }
     
     /**
@@ -30,7 +29,7 @@ public class HeroWithSword extends Hero implements ISubject
     @Override
     public void collectWeapons() {
        // EnemyObject enemyObject = (EnemyObject)getOneIntersectingObject(EnemyObject.class);
-            weaponCount += 1;
+            weaponCount++;
         //if(enemyObject != null){
         //   weaponCount++;
         //}

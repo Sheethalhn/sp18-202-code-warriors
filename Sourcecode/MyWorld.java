@@ -18,10 +18,11 @@ public class MyWorld extends World
     private ScoreBoard scoreBoard;
     private EnemyObject enemyObject;
     private Switch textButton = null;
-    
+    public int count = 0;
+
     public MyWorld()
     {    
-        // Create a new world with 1000x800 cells with a cell size of 1x1 pixels.
+        // Create a new world with 1000x800 cells with a cell size of 1x1 pixels
         super(1200, 800, 1);
         hero = new Hero();
         scoreBoard =  new ScoreBoard();
@@ -34,7 +35,7 @@ public class MyWorld extends World
         hero.registerObserver(scoreBoard);
     }
     public void act()
-    {
+    { 
         if (Greenfoot.getRandomNumber(100) < 1)
         {
             addObject(enemyObject, 1200, Greenfoot.getRandomNumber(360));
@@ -44,7 +45,12 @@ public class MyWorld extends World
             addObject(enemyObject, 1200, 359);
         }
         if(textButton.gotClicked()) {
-            changeHeroSwordMode();
+            count++;
+            if (count % 2 != 0) {
+                changeHeroSwordMode();
+            }else{
+                changeHeroMode();
+            }
         }
          
     }
@@ -60,8 +66,8 @@ public class MyWorld extends World
     public void changeHeroMode() {
         addObject(hero, 100, 200);
         removeObject(heroWithSword);
-        scoreBoard.attach(heroWithSword);
-        heroWithSword.registerObserver(scoreBoard);
+        scoreBoard.attach(hero);
+        hero.registerObserver(scoreBoard);
     }
    
 }
