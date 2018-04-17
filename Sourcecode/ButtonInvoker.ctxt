@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=ButtonInvoker
+comment0.text=\n\ Write\ a\ description\ of\ class\ ButtonInvoker\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=void\ click()
+comment2.params=newCommand
+comment2.target=void\ setCommand(ButtonCommand)
+numComments=3

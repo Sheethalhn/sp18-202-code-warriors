@@ -68,7 +68,7 @@ public class Hero extends Players implements ISubject, AttackDecorator
         if(isTouching(EnemyObject.class))
         {
             removeTouching(EnemyObject.class);
-            MyWorld myWorld = (MyWorld)getWorld();
+            Level1 level1 = (Level1)getWorld();
             notifyObservers(20);
             collectWeapons();
         }
