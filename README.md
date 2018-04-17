@@ -10,6 +10,15 @@
 
 BurnDown Chart: https://docs.google.com/spreadsheets/d/1LbN_SoAt0a4o_AEu9KCI6MCBqQ4C8MlCEqgSjGNqUWA/
 
+## Week 2 (4/14/2017): Minutes of the meeting
+
+1.  What did the team do the past week? The team implemented Level1 game with fighter, enemy objects. Scores are to be increased when there is a collision. Implemented observer pattern.
+
+2.  What is the team going to do next week? The team decided to implement Decorator pattern, State Pattern, Abstract Factory pattern.
+
+3.  What are the current blockers/challenges the team is facing? Team is facing code integration issues.
+
+
 ## Week 1 (4/2/2017): Minutes of the meeting
 
 1.  What did the team do the past week? The team have discussed several ideas for the project and finally decided to do a War Style Game for this Project
