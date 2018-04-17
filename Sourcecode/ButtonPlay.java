@@ -3,14 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class ButtonPlay here.
  * 
- * @author (your name) 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * If you click on this button gives the game starts.
- * 
- * @author  
- * @version 
+ * @author (your name)  
  */
 public class ButtonPlay extends Button implements ButtonInvoker
 {

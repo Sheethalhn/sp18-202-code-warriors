@@ -27,7 +27,7 @@ public class ScoreBoard extends Actor implements IObserver
     }    
     private void showScore()
     {
-        getWorld().showText("Score: " + score, 970, 35);
+        getWorld().showText("Score: " + score, 900, 35);
     }
     public void addScore(int points){
         score+=points;

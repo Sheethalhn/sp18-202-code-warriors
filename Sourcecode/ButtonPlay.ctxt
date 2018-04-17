@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ButtonPlay
-comment0.text=\n\ Write\ a\ description\ of\ class\ ButtonPlay\ here.\n\ \n\ @author\ (your\ name)\ \nimport\ greenfoot.*;\ \ //\ (World,\ Actor,\ GreenfootImage,\ Greenfoot\ and\ MouseInfo)\n\n/**\n\ If\ you\ click\ on\ this\ button\ gives\ the\ game\ starts.\n\ \n\ @author\ \ \n\ @version\ \n
+comment0.text=\n\ Write\ a\ description\ of\ class\ ButtonPlay\ here.\n\ \n\ @author\ (your\ name)\ \ \n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=
