@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class GifImage
 {
     /** The images used in the animation. */
-    private GreenfootImage[] images;
+    private GreenfootImage[] images; 
     /** The delay between each frame. */
     private int[] delay;
     /** The index of the current frame in the GIF file. */

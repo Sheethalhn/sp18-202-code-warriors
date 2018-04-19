@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Fighter here.
@@ -33,7 +33,7 @@ public class Hero extends Players implements ISubject, AttackDecorator
             setLocation(mi.getX(), mi.getY());
         
         }
-        // check for collision after moving object
+        // check for collision after moving object 
         if (Greenfoot.mouseDragEnded(this) && isFighterMoved)
         {
             isFighterMoved = false;
@@ -53,7 +53,7 @@ public class Hero extends Players implements ISubject, AttackDecorator
         if (Greenfoot.isKeyDown("left")) {
             move(-3);
             isFighterMoved = true;
-            checkCollision();
+            checkCollision(); 
         }
         if (Greenfoot.isKeyDown("right")) {
             move(3);
@@ -64,10 +64,24 @@ public class Hero extends Players implements ISubject, AttackDecorator
     
     private void checkCollision()
     {
-        //EnemyObject enemyObject = (EnemyObject)getOneIntersectingObject(EnemyObject.class);
-        if(isTouching(EnemyObject.class))
+        //Rocket rocket = (Rocket)getOneIntersectingObject(Rocket.class);
+        if(isTouching(Rocket.class)  )
         {
-            removeTouching(EnemyObject.class);
+            removeTouching(Rocket.class);
+            Level1 level1 = (Level1)getWorld();
+            notifyObservers(20);
+            collectWeapons(); 
+        }
+        else if(isTouching(Fire.class))
+        {
+            removeTouching(Fire.class);
+            Level1 level1 = (Level1)getWorld(); 
+            notifyObservers(20);
+            collectWeapons(); 
+        }
+        else if(isTouching(Bat.class))
+        {
+            removeTouching(Bat.class);
             Level1 level1 = (Level1)getWorld();
             notifyObservers(20);
             collectWeapons();
@@ -77,9 +91,9 @@ public class Hero extends Players implements ISubject, AttackDecorator
     public void notifyObservers(int points){
         ((ScoreBoard)observer).addScore(points);
     }
-    public void registerObserver(IObserver o){
+    public void registerObserver(IObserver o){ 
         observer = o;
-    }
+    } 
    
     public void collectWeapons() {
     }
