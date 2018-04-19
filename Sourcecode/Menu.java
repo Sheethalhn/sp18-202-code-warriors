@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Menu extends World
 {
-    private GreenfootSound backgroundMusic;
-    private GifImage gif = new GifImage("blackback.gif");
+    private GreenfootSound backgroundMusic;  
+    //private GifImage gif = new GifImage("blackback.gif");
     private ButtonPlay buttonPlay;
     private ButtonHelp buttonHelp;
     private PlayCommand playCmd;
@@ -32,7 +32,7 @@ public class Menu extends World
     
     public void act()
     {
-       setBackground(gif.getCurrentImage());
+       //setBackground(gif.getCurrentImage());
        backgroundMusic.playLoop();
         //if(Greenfoot.mouseClicked(buttonPlay) && backgroundMusic.isPlaying())
            // backgroundMusic.stop();

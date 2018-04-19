@@ -1,12 +1,12 @@
 #BlueJ class context
 comment0.target=ButtonPlay
-comment0.text=\n\ Write\ a\ description\ of\ class\ ButtonPlay\ here.\n\ \n\ @author\ (your\ name)\ \ \n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ButtonPlay\ here.\r\n\ \r\n\ @author\ (your\ name)\ \ \r\n
 comment1.params=
 comment1.target=void\ act()
 comment2.params=
 comment2.target=void\ click()
-comment2.text=\n\ click\ on\ this\ button\ to\ start\ the\ game\n
+comment2.text=\r\n\ click\ on\ this\ button\ to\ start\ the\ game\r\n
 comment3.params=newCmd
 comment3.target=void\ setCommand(ButtonCommand)
-comment3.text=\n\ Method\ to\ set\ command\n
+comment3.text=\r\n\ Method\ to\ set\ command\r\n
 numComments=4

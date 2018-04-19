@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+  import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class MyWorld here.
@@ -16,7 +16,9 @@ public class Level1 extends World
     private Hero hero;
     private HeroWithSword heroWithSword;
     private ScoreBoard scoreBoard;
-    private EnemyObject enemyObject;
+    private Rocket rocket;
+    private Fire fire;
+    private Bat bat;
     private Switch textButton = null;
     public int count = 0;
     GreenfootSound backgroundMusic = new GreenfootSound("1.mp3");
@@ -40,7 +42,9 @@ public class Level1 extends World
         
         hero = new Hero();
         scoreBoard =  new ScoreBoard();
-        enemyObject = new EnemyObject();
+        rocket = new Rocket();
+        fire = new Fire();
+        bat = new Bat();
         textButton = new Switch("SwitchMode");
         addObject(hero, 100, 200);
         addObject(scoreBoard, 850, 35);
@@ -48,8 +52,9 @@ public class Level1 extends World
         scoreBoard.attach(hero);
         hero.registerObserver(scoreBoard);
     }
-    public void act()
-    { 
+    public void act() { 
+       
+        
         if(!backgroundMusic.isPlaying())
         {
             backgroundMusic.playLoop();
@@ -58,25 +63,25 @@ public class Level1 extends World
         scrollPosition -= scrollSpeed;
         while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
         while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
-        paint(scrollPosition);
+        paint(scrollPosition); 
+        counter++;
         
-        if (Greenfoot.getRandomNumber(100) < 1)
+        if(counter>=20)
         {
-            addObject(enemyObject, 1200, Greenfoot.getRandomNumber(360));
+            createEnemy();
+            counter=0;
         }
-        if (Greenfoot.getRandomNumber(100) < 1)
-        {
-            addObject(enemyObject, 1200, 359);
-        }
+            
+  
         if(textButton.gotClicked()) {
-            count++;
+            count++; 
             if (count % 2 != 0) {
                 changeHeroSwordMode();
             }else{
                 changeHeroMode();
             }
         }
-         
+          
     }
     
     private void paint(int position)
@@ -95,10 +100,24 @@ public class Level1 extends World
     }
     
     public void changeHeroMode() {
-        addObject(hero, 100, 200);
+        addObject(hero, 100, 200); 
         removeObject(heroWithSword);
         scoreBoard.attach(hero);
         hero.registerObserver(scoreBoard);
+    }
+    
+    public void createEnemy()
+    {
+        EnemyFactory theEnemyFactory = new EnemyFactory();
+        Enemy  theEnemy = null;       
+        int category = Greenfoot.getRandomNumber(3);
+       if(category >= 0)
+       {
+           theEnemy = theEnemyFactory.EnemyCategory(category);           
+           addObject(theEnemy, getWidth(), Greenfoot.getRandomNumber(600));           
+       }    
+        
+        
     }
    
 }
