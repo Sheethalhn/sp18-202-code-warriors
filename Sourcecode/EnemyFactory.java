@@ -5,22 +5,22 @@ public class EnemyFactory
         Enemy newEnemy = null;
         if(category == 0)
         {
-            RocketFactory newFighterFactory = new RocketFactory();
-            newEnemy = newFighterFactory.makeEnemy();
+            RocketFactory newRocketFactory = new RocketFactory();
+            newEnemy = newRocketFactory.makeEnemy();
             //return newEnemy;
         }
         
         else if(category == 1)
         {
-            BatFactory newColonelFactory = new BatFactory();
-            newEnemy = newColonelFactory.makeEnemy();
+            SwordFactory newSwordFactory = new SwordFactory();
+            newEnemy = newSwordFactory.makeEnemy();
             //return newEnemy;
         }
         
         else if(category == 2)
         {
-            FireFactory newCaptainFactory = new FireFactory();
-            newEnemy = newCaptainFactory.makeEnemy();
+            FireFactory newFireFactory = new FireFactory();
+            newEnemy = newFireFactory.makeEnemy();
             //return newEnemy;   
         }
         //else return newEnemy;

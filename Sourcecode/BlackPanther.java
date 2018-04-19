@@ -6,13 +6,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (Saranya) 
  * @version (a version number or a date)
  */
-public class HeroWithSword extends Hero implements ISubject
+public class BlackPanther extends TChalla implements ISubject
 {
     IObserver observer;
     boolean isFighterMoved;
     public int weaponCount;
     
-    public HeroWithSword() {
+    public BlackPanther() {
         isFighterMoved = false;
     }
     

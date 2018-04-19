@@ -6,12 +6,12 @@
  * @author (Manisha) 
  * @version (a version number or a date)
  */
-public class Hero extends Players implements ISubject, AttackDecorator
+public class  TChalla extends Players implements ISubject, AttackDecorator
 {
     IObserver observer;
     boolean isFighterMoved;
    
-    public Hero(){
+    public TChalla(){
         isFighterMoved = false;
     }
    
@@ -79,9 +79,9 @@ public class Hero extends Players implements ISubject, AttackDecorator
             notifyObservers(20);
             collectWeapons(); 
         }
-        else if(isTouching(Bat.class))
+        else if(isTouching(Sword.class))
         {
-            removeTouching(Bat.class);
+            removeTouching(Sword.class);
             Level1 level1 = (Level1)getWorld();
             notifyObservers(20);
             collectWeapons();

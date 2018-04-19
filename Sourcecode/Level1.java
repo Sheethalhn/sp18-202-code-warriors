@@ -13,12 +13,12 @@ public class Level1 extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    private Hero hero;
-    private HeroWithSword heroWithSword;
+    private TChalla tChalla;
+    private BlackPanther blackPanther;
     private ScoreBoard scoreBoard;
     private Rocket rocket;
     private Fire fire;
-    private Bat bat;
+    private Sword sword;
     private Switch textButton = null;
     public int count = 0;
     GreenfootSound backgroundMusic = new GreenfootSound("1.mp3");
@@ -40,17 +40,17 @@ public class Level1 extends World
         bgBase = new GreenfootImage(picWidth, getHeight());
         bgBase.drawImage(bgImage, 0, 0);
         
-        hero = new Hero();
+        tChalla = new TChalla();
         scoreBoard =  new ScoreBoard();
         rocket = new Rocket();
         fire = new Fire();
-        bat = new Bat();
+        sword = new Sword();
         textButton = new Switch("SwitchMode");
-        addObject(hero, 100, 200);
+        addObject(tChalla, 100, 200);
         addObject(scoreBoard, 850, 35);
         addObject(textButton, 600, 35);
-        scoreBoard.attach(hero);
-        hero.registerObserver(scoreBoard);
+        scoreBoard.attach(tChalla);
+        tChalla.registerObserver(scoreBoard);
     }
     public void act() { 
        
@@ -92,24 +92,24 @@ public class Level1 extends World
     } 
     
     public void changeHeroSwordMode() {
-        heroWithSword = new HeroWithSword();
-        addObject(heroWithSword, 100, 200);
-        removeObject(hero);
-        scoreBoard.attach(heroWithSword);
-        heroWithSword.registerObserver(scoreBoard);
+        blackPanther = new BlackPanther();
+        addObject(blackPanther, 100, 200);
+        removeObject(tChalla);
+        scoreBoard.attach(blackPanther);
+        blackPanther.registerObserver(scoreBoard);
     }
     
     public void changeHeroMode() {
-        addObject(hero, 100, 200); 
-        removeObject(heroWithSword);
-        scoreBoard.attach(hero);
-        hero.registerObserver(scoreBoard);
+        addObject(tChalla, 100, 200); 
+        removeObject(blackPanther);
+        scoreBoard.attach(tChalla);
+        tChalla.registerObserver(scoreBoard);
     }
     
     public void createEnemy()
     {
         EnemyFactory theEnemyFactory = new EnemyFactory();
-        Enemy  theEnemy = null;       
+        Enemy theEnemy = null;       
         int category = Greenfoot.getRandomNumber(3);
        if(category >= 0)
        {

@@ -4,10 +4,10 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BatFactory extends EnemyFactory 
+public class SwordFactory extends EnemyFactory 
 {
    public Enemy makeEnemy()
    {
-       return new Bat();
+       return new Sword();
    }
 }
