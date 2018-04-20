@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Menu extends World
 {
+    private static final int GAME_SPEED = 50;
     private GreenfootSound backgroundMusic;  
     //private GifImage gif = new GifImage("blackback.gif");
     private ButtonPlay buttonPlay;
