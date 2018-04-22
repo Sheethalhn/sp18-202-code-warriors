@@ -13,10 +13,11 @@ public class HealthScore extends Actor implements IObserver
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     ISubject subject;
-    private int health;
+    private static int health, sword;
     
     public HealthScore() {
         health = 0;
+        sword = 0;
         //GreenfootImage scoreBoardImage = getImage();
         //scoreBoardImage.scale(scoreBoardImage.getWidth(), scoreBoardImage.getHeight());
         //setImage(scoreBoardImage);
@@ -28,9 +29,13 @@ public class HealthScore extends Actor implements IObserver
     private void showHealth()
     {
         getWorld().showText("Health: " + health, 100, 35);
+        getWorld().showText("Sword: " + sword, 100, 55);
     }
     public void addHealthScore(int healthpoints){
         health+=healthpoints;
+    }
+    public void addSwordScore(int swordpoints){
+        sword+=swordpoints;
     }
     public void attach(ISubject sub){
         subject = sub;

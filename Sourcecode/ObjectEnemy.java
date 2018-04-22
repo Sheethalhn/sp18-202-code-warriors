@@ -10,8 +10,10 @@ public class  ObjectEnemy extends Players implements ISubject, AttackDecorator
 {
     IObserver observer;
     boolean isFighterMoved;
+    boolean isHealtScore;
    
     public ObjectEnemy(){
+        isHealtScore = true;
         isFighterMoved = false;
     }
    
@@ -21,7 +23,11 @@ public class  ObjectEnemy extends Players implements ISubject, AttackDecorator
      */
     public void act() 
     {
-        checkCollision();
+        String worldname = getWorld().getClass().getName();
+        if (worldname == "Level0")
+        setImage(new GreenfootImage("Black_Panther.png"));
+      
+       checkCollision();
         if (Greenfoot.mousePressed(this) && !isFighterMoved)
         {
             isFighterMoved = true;
@@ -41,50 +47,71 @@ public class  ObjectEnemy extends Players implements ISubject, AttackDecorator
         }
        
         if (Greenfoot.isKeyDown("up")) {
-            setLocation(getX(), getY() - 3);
+            setLocation(getX(), getY() - 7);
             isFighterMoved = true;
             checkCollision();
         }
         if (Greenfoot.isKeyDown("down")) {
-            setLocation(getX(), getY() + 3);
+            setLocation(getX(), getY() + 7);
             isFighterMoved = true;
             checkCollision();
         }
         if (Greenfoot.isKeyDown("left")) {
-            move(-3);
+            move(-7);
             isFighterMoved = true;
             checkCollision(); 
         }
         if (Greenfoot.isKeyDown("right")) {
-            move(3);
+            move(7);
             isFighterMoved = true;
             checkCollision();
         }
-    }    
+     
+    }   
     
     private void checkCollision()
     {
         //Rocket rocket = (Rocket)getOneIntersectingObject(Rocket.class);
-
-        if(isTouching(Fire.class))
+        if(isTouching(Rocket.class))
+        {
+            removeTouching(Rocket.class);
+            Level0 level0 = (Level0)getWorld(); 
+            isHealtScore = true;
+            notifyObservers(20);
+            collectWeapons(); 
+        }
+        else if(isTouching(Fire.class))
         {
             removeTouching(Fire.class);
-            Level0 level0 = (Level0)getWorld(); 
-            notifyObservers(20);
+            Level0 level0 = (Level0)getWorld();
+            isHealtScore = true;
+            notifyObservers(-10);
             collectWeapons(); 
         }
         else if(isTouching(Sword.class))
         {
             removeTouching(Sword.class);
             Level0 level0 = (Level0)getWorld();
+            isHealtScore = false;
             notifyObservers(20);
             collectWeapons();
         }
     }
     
     public void notifyObservers(int points){
-        ((HealthScore)observer).addHealthScore(points);
+        
+        
+        if (isHealtScore) {
+             ((HealthScore)observer).addHealthScore(points);
+
+        } else {
+            ((HealthScore)observer).addSwordScore(points);
+
+        }
+    
+        
     }
+    
     public void registerObserver(IObserver o){ 
         observer = o;
     } 

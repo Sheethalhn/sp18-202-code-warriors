@@ -45,6 +45,7 @@ public class Level0 extends World
         
         objectEnemy = new ObjectEnemy();
         healthScore =  new HealthScore();
+        
         fire = new Fire();
         sword = new Sword();
         rocket = new Rocket();
@@ -56,7 +57,7 @@ public class Level0 extends World
         objectEnemy.registerObserver(healthScore);
     }
     public void act() { 
-       
+      
         
         if(!backgroundMusic.isPlaying())
         {
@@ -124,7 +125,7 @@ public class Level0 extends World
            enemyobjectCount++;
        }  
 
-       if(enemyobjectCount==100)
+       if(enemyobjectCount==200)
        Greenfoot.setWorld(new Level1help());
         //rocket.setImage("rocket.png");
         
