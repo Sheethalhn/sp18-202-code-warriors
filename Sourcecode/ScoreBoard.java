@@ -14,8 +14,18 @@ public class ScoreBoard extends Actor implements IObserver
      */
     ISubject subject;
     private int score;
+    private static ScoreBoard sb;
     
-    public ScoreBoard() {
+    
+    public static ScoreBoard getInstance(){
+        if(sb == null)
+            sb = new ScoreBoard();
+            
+        return sb;
+            
+    }
+    
+    private ScoreBoard() {
         score = 0;
         //GreenfootImage scoreBoardImage = getImage();
         //scoreBoardImage.scale(scoreBoardImage.getWidth(), scoreBoardImage.getHeight());
