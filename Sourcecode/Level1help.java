@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Menu extends World
+public class Level1help extends World
 {
     private static final int GAME_SPEED = 50;
     private GreenfootSound backgroundMusic;  
@@ -20,7 +20,7 @@ public class Menu extends World
      * Constructor for objects of class Menu.
      * 
      */
-    public Menu()
+    public Level1help()
     {    
         super(1000, 600, 1); 
         backgroundMusic = new GreenfootSound("1.mp3");
@@ -44,8 +44,8 @@ public class Menu extends World
      */
     public void prepare()
     {
-        addObject(buttonPlay, 600, 250);
-        addObject(buttonHelp, 600, 350);        
+        addObject(buttonPlay, 600, 400);
+        addObject(buttonHelp, 600, 480);        
         buttonPlay.setCommand(playCmd);
         buttonHelp.setCommand(helpCmd);
         
@@ -57,7 +57,7 @@ public class Menu extends World
                 {
                     if(Greenfoot.mouseClicked(buttonPlay)){
                         //clicSound.play();
-                        Greenfoot.setWorld(new Level0());
+                        Greenfoot.setWorld(new Level1());
                     }
             }
            });

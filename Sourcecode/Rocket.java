@@ -15,6 +15,11 @@ public class Rocket extends Enemy
      
     public void act() 
     {
+        //World worlda = getWorld();
+String worldname = getWorld().getClass().getName();
+        if (worldname == "Level0")
+        setImage(new GreenfootImage("gem.png"));
+ 
         super.act();
     }    
 
