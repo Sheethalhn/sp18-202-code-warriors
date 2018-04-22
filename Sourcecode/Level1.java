@@ -41,7 +41,7 @@ public class Level1 extends World
         bgBase.drawImage(bgImage, 0, 0);
         
         tChalla = new TChalla();
-        scoreBoard =  new ScoreBoard();
+        scoreBoard =  ScoreBoard.getInstance();
         rocket = new Rocket();
         fire = new Fire();
         sword = new Sword();
