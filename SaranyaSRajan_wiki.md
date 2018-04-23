@@ -1,3 +1,6 @@
+Week 4:
+04/23/2018 Attended team meeting last week. As we just have a week away for project submission, looking for game ideas to improve strategy. Planning on implemeting a Strategy pattern in the coming week. Some areas still need improvisation, sounds for explosion, game timer, hero's health score etc.
+
 Week 3:
 04/16/2018 Implemented Decorator Pattern. In Level 1 Game, Hero can switch to Herosword mode to collect weapons to be used against enemies in Level 2.
 
