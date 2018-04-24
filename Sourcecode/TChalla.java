@@ -1,4 +1,4 @@
- import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+  import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Fighter here.
@@ -8,8 +8,11 @@
  */
 public class  TChalla extends Players implements ISubject, AttackDecorator
 {
-    IObserver observer;
+    IObserver observer; 
     boolean isFighterMoved;
+    Counter counter = new Counter();
+    Weapon sword;
+     
    
     public TChalla(){
         isFighterMoved = false;
@@ -21,7 +24,15 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
      */
     public void act() 
     {
-        checkCollision();
+         checkCollision();
+        KeyMovements(); 
+        attackWeapon();
+
+        
+    }    
+    
+    public void KeyMovements()
+    {
         if (Greenfoot.mousePressed(this) && !isFighterMoved)
         {
             isFighterMoved = true;
@@ -37,38 +48,57 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
         if (Greenfoot.mouseDragEnded(this) && isFighterMoved)
         {
             isFighterMoved = false;
-            checkCollision();
+            
         }
        
         if (Greenfoot.isKeyDown("up")) {
             setLocation(getX(), getY() - 3);
             isFighterMoved = true;
             checkCollision();
+            
         }
         if (Greenfoot.isKeyDown("down")) {
             setLocation(getX(), getY() + 3);
             isFighterMoved = true;
+            
             checkCollision();
         }
         if (Greenfoot.isKeyDown("left")) {
             move(-3);
             isFighterMoved = true;
-            checkCollision(); 
+            checkCollision();
+            
         }
         if (Greenfoot.isKeyDown("right")) {
             move(3);
             isFighterMoved = true;
             checkCollision();
         }
-    }    
+    }
+    
+    public void attackWeapon()
+    {
+        if(counter.timeElapsed()> 400 )
+        {
+            if(Greenfoot.isKeyDown("space"))
+            {
+            World  world =  this.getWorld();
+            Weapon sword = new Weapon();
+            world.addObject(sword, this.getX()+this.getImage().getWidth()/2+20   , this.getY()); 
+            counter.timer();
+            
+            }
+            
+        }    
+    } 
     
     private void checkCollision()
-    {
+    {  
         //Rocket rocket = (Rocket)getOneIntersectingObject(Rocket.class);
-        if(isTouching(Rocket.class)  )
+        if(isTouching(Rocket.class))
         {
             removeTouching(Rocket.class);
-            Level1 level1 = (Level1)getWorld();
+            Level1 level1 = (Level1)getWorld(); 
             notifyObservers(20);
             collectWeapons(); 
         }
@@ -80,7 +110,7 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
             collectWeapons(); 
         }
         else if(isTouching(Sword.class))
-        {
+        { 
             removeTouching(Sword.class);
             Level1 level1 = (Level1)getWorld();
             notifyObservers(20);

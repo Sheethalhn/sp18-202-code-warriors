@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=TChalla
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Fighter\ here.\r\n\ \r\n\ @author\ (Manisha)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=TChalla()
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Fighter\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=
+comment3.target=void\ KeyMovements()
+comment4.params=
+comment4.target=void\ attackWeapon()
+comment5.params=
+comment5.target=void\ checkCollision()
+comment6.params=points
+comment6.target=void\ notifyObservers(int)
+comment7.params=o
+comment7.target=void\ registerObserver(IObserver)
+comment8.params=
+comment8.target=void\ collectWeapons()
+comment9.params=
+comment9.target=void\ displayWeaponCount()
+numComments=10
