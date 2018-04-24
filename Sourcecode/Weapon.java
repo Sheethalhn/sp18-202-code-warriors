@@ -9,6 +9,12 @@
 public class Weapon extends Players implements ISubject
 {
     IObserver observer; 
+    ScoreBoard scoreBoard =  ScoreBoard.getInstance();
+    public Weapon()
+    {
+          scoreBoard.attach(this);
+          this.registerObserver(scoreBoard); 
+    }
     public void act() 
     {
         move(5);
@@ -21,7 +27,7 @@ public class Weapon extends Players implements ISubject
          {  
 
             removeTouching(Rocket.class);
-             //notifyObservers(20);
+            notifyObservers(20);
             getWorld().removeObject(this);
             
  
@@ -30,7 +36,7 @@ public class Weapon extends Players implements ISubject
          {   
 
             removeTouching(Fire.class);
-            //notifyObservers(20);
+            notifyObservers(20);
             getWorld().removeObject(this);
             
             
@@ -40,7 +46,7 @@ public class Weapon extends Players implements ISubject
          {  
 
             removeTouching(Sword.class);
-            //notifyObservers(20);
+            notifyObservers(20);
             getWorld().removeObject(this); 
               
  

@@ -1,4 +1,4 @@
-     import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class MyWorld here.
@@ -28,7 +28,7 @@ public class Level1 extends World
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;
     private int counter = 0;
-    private Weapon weapon;
+    
 
 
     public Level1()
@@ -46,15 +46,13 @@ public class Level1 extends World
         rocket = new Rocket();
         fire = new Fire();
         sword = new Sword();
-        weapon = new Weapon();
         textButton = new Switch("SwitchMode");
         addObject(tChalla, 100, 200);
         addObject(scoreBoard, 850, 35);
         addObject(textButton, 600, 35);
         scoreBoard.attach(tChalla);
-        scoreBoard.attach(weapon);
         tChalla.registerObserver(scoreBoard);
-        weapon.registerObserver(scoreBoard);  
+
         
     }
     public void act() { 
