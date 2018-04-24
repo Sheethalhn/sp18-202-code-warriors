@@ -25,7 +25,7 @@ Level1 - (work in progress) - Attack enemies using the swords. There are 3 types
 
 1.  What did the team do the past week? The team implemented Factory method pattern to generate multiple enemies ,decorator pattern where fighter gets his weapons after certain  score is reached and command pattern for the game Menu.
 
-2.  What is the team going to do next week? The team decided to implement State pattern and a initial level where our fighter has to collect diamonds to increase his health and collect swords to fight against enemies in next level
+2.  What is the team going to do next week? The team decided to implement State pattern and a initial level where our fighter has to collect heart crystals to increase his health and collect swords to fight against enemies in next level.Decided to implement attack by hero on his enemies.  
 
 3.  What are the current blockers/challenges the team is facing? Team is facing code integration issues.
 
