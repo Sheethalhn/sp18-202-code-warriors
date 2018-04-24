@@ -10,6 +10,16 @@
 
 BurnDown Chart: https://docs.google.com/spreadsheets/d/1LbN_SoAt0a4o_AEu9KCI6MCBqQ4C8MlCEqgSjGNqUWA/
 
+## Game flow is being described here for everyone's quick reference. This will be updated as progress occurs.
+
+Start page (Menu - world) - Start button will start the game level 0. Help button will give instructions for level 0.
+
+Level0 - Collect heart crystal and build life, avoid health damage by avoinding the fireballs. Collect swords to fight enemies in next level. After a specific time to build health and sword score, the level ends. 
+
+Level 1 Welcome Page (level1help - world) - Start button will start the game level 1. Help button will give instructions for level 1.
+
+Level1 - (work in progress) - Attack enemies using the swords. There are 3 types of enemies. Attacking increases game points and  reduces sword count. Not attacking and colliding directly with an enemy reduces health.
+
 
 ## Week 3 (4/21/2017): Minutes of the meeting
 
