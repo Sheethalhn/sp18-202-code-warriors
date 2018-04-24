@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Counter
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Counter\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ timer()
-comment2.params=
-comment2.target=int\ timeElapsed()
-comment2.text=\r\n\ Returns\ the\ amount\ of\ milliseconds\ that\ have\ elapsed\ since\ shot()\r\n\ was\ last\ called.\ \ This\ timer\ runs\ irrespective\ of\ Greenfoot's\r\n\ act()\ cycle,\ so\ if\ you\ call\ it\ many\ times\ during\ the\ same\ Greenfoot\ frame,\r\n\ you\ may\ get\ different\ values\ returned.\r\n
-numComments=3

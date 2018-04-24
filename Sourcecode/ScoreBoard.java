@@ -1,4 +1,4 @@
- import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class ScoreBoard here.
@@ -12,11 +12,11 @@ public class ScoreBoard extends Actor implements IObserver
      * Act - do whatever the ScoreBoard wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    ISubject subject; 
+    ISubject subject;
     private int score;
     private static ScoreBoard sb;
     
-     
+    
     public static ScoreBoard getInstance(){
         if(sb == null)
             sb = new ScoreBoard();
