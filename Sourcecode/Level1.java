@@ -29,6 +29,8 @@ public class Level1 extends World
     private int scrollPosition = 0;
     private int counter = 0;
     
+    private HealthScore earnedHealth;
+    
 
 
     public Level1()
@@ -53,6 +55,10 @@ public class Level1 extends World
         scoreBoard.attach(tChalla);
         tChalla.registerObserver(scoreBoard);
 
+        
+    }
+    public void setHealthScore(HealthScore hs){
+        earnedHealth =  hs ;
         
     }
     public void act() { 
