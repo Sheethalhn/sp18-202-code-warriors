@@ -29,8 +29,7 @@ public class Level1 extends World
     private int scrollPosition = 0;
     private int counter = 0;
     
-    private HealthScore earnedHealth;
-    
+    private HealthScore healthScore;
 
 
     public Level1()
@@ -45,6 +44,7 @@ public class Level1 extends World
         
         tChalla = new TChalla();
         scoreBoard =  ScoreBoard.getInstance();
+        healthScore = AppDataPool.getInstance().getHealthScore();
         rocket = new Rocket();
         fire = new Fire();
         sword = new Sword();
@@ -52,15 +52,13 @@ public class Level1 extends World
         addObject(tChalla, 100, 200);
         addObject(scoreBoard, 850, 35);
         addObject(textButton, 600, 35);
+        addObject(healthScore,750,35);
         scoreBoard.attach(tChalla);
         tChalla.registerObserver(scoreBoard);
 
         
     }
-    public void setHealthScore(HealthScore hs){
-        earnedHealth =  hs ;
-        
-    }
+   
     public void act() { 
        
         

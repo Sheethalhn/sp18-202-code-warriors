@@ -44,8 +44,17 @@ public class HealthScore extends Actor implements IObserver
     public void detach(ISubject s){
         subject = null;
     }
-    public int getHealthScore(){
+    public int getHealth(){
         return health;
+    }
+    public int getSword(){
+        return sword;
+    }
+    public void setHealth(int h){
+        health = h;
+    }
+    public void setSword(int sw){
+         sword =sw;
     }
     
 }
