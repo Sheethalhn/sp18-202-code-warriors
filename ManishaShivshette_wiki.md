@@ -1,3 +1,5 @@
+Week 3:
+04/26/2018 Working on integration changes and helping team  members to resolve issues.
 
 Week 3:
 04/21/2018 Organized a meeting with team members to discuss the integration issues and logical end point of game. 

@@ -1,4 +1,4 @@
- import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+  import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class AttackObject here.
@@ -16,12 +16,16 @@ public class Rocket extends Enemy
     public void act() 
     {
         //World worlda = getWorld();
-String worldname = getWorld().getClass().getName();
+        String worldname = getWorld().getClass().getName();
         if (worldname == "Level0")
-        setImage(new GreenfootImage("gem.png"));
+        setImage(new GreenfootImage("greengem.jpg"));
+        else if (worldname == "Level1")
+        setImage(new GreenfootImage("Rocketlevel1.png"));
  
-        super.act();
+        super.act(); 
+
     }    
+ 
 
 }
-
+ 

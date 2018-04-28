@@ -30,7 +30,7 @@ public class Level0 extends World
     private int counter = 0;
     private int enemyobjectCount = 0;
 
-
+   
     public Level0()
     {    
         // Create a new world with 1000x800 cells with a cell size of 1x1 pixels
@@ -126,7 +126,11 @@ public class Level0 extends World
        }  
 
        if(enemyobjectCount==200)
-       Greenfoot.setWorld(new Level1help());
+       {
+           AppDataPool.getInstance().setHealthScore(healthScore);
+           Greenfoot.setWorld(new Level1help());
+           
+       }
         //rocket.setImage("rocket.png");
         
         
