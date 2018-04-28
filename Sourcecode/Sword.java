@@ -8,7 +8,10 @@ public class Sword extends Enemy
     {
         String worldname = getWorld().getClass().getName();
         if (worldname == "Level1")
-        setImage(new GreenfootImage("spikeball.png"));
+        {
+            setImage(new GreenfootImage("spikeball.png"));
+            turn(-1);
+        }
         
         super.act();
   
