@@ -54,8 +54,10 @@ public class Level1 extends World
         addObject(textButton, 600, 35);
         addObject(healthScore,750,35);
         scoreBoard.attach(tChalla);
+        //rakhee
+        healthScore.attach(tChalla);
         tChalla.registerObserver(scoreBoard);
-
+        tChalla.registerObserver(healthScore);
         
     }
    
@@ -73,7 +75,7 @@ public class Level1 extends World
         paint(scrollPosition); 
         counter++;
         
-        if(counter>=20)
+        if(counter>=70)
         {
             createEnemy();
             counter=0;

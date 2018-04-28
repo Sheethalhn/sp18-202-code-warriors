@@ -17,6 +17,7 @@ public class Weapon extends Players implements ISubject
     }
     public void act() 
     {
+        setImage(new GreenfootImage("sword_flip.png"));
         move(5);
         removeObject();
     }

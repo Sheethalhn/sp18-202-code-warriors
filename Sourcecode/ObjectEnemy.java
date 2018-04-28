@@ -85,7 +85,7 @@ public class  ObjectEnemy extends Players implements ISubject, AttackDecorator
             removeTouching(Fire.class);
             Level0 level0 = (Level0)getWorld();
             isHealtScore = true;
-            notifyObservers(-10);
+            notifyObservers(-20);
             collectWeapons(); 
         }
         else if(isTouching(Sword.class))

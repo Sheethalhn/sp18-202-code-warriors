@@ -18,7 +18,9 @@ public class Rocket extends Enemy
         //World worlda = getWorld();
         String worldname = getWorld().getClass().getName();
         if (worldname == "Level0")
-        setImage(new GreenfootImage("gem.png"));
+        setImage(new GreenfootImage("greengem.jpg"));
+        else if (worldname == "Level1")
+        setImage(new GreenfootImage("Rocketlevel1.png"));
  
         super.act(); 
 
