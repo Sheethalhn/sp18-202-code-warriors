@@ -15,6 +15,7 @@ public class Fire extends Enemy
     public void act() 
     { 
         String worldname = getWorld().getClass().getName();
+        turn(-1);
         super.act();
 
     }     
