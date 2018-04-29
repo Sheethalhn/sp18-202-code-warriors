@@ -54,7 +54,7 @@ public class Level1 extends World
         addObject(textButton, 600, 35);
         addObject(healthScore,750,35);
         scoreBoard.attach(tChalla);
-        //rakhee
+        
         healthScore.attach(tChalla);
         tChalla.registerObserver(scoreBoard);
         tChalla.registerObserver(healthScore);
@@ -90,7 +90,9 @@ public class Level1 extends World
                 changeHeroMode();
             }
         }
-          
+         if (tChalla != null) {
+            tChalla.stopGameForScore(scoreBoard.getScore());
+        }
     }
     
     private void paint(int position)

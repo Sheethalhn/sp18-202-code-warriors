@@ -7,6 +7,7 @@ public class Sword extends Enemy
     public void act() 
     {
         String worldname = getWorld().getClass().getName();
+        setImage(new GreenfootImage("sword_flip.png"));
         if (worldname == "Level1")
         {
             setImage(new GreenfootImage("spikeball.png"));

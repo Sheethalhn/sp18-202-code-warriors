@@ -125,7 +125,7 @@ public class Level0 extends World
            enemyobjectCount++;
        }  
 
-       if(enemyobjectCount==200)
+       if(enemyobjectCount==150)
        {
            AppDataPool.getInstance().setHealthScore(healthScore);
            Greenfoot.setWorld(new Level1help());

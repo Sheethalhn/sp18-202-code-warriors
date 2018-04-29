@@ -13,11 +13,14 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
     Counter counter = new Counter();
     Weapon sword;
     boolean isSwordscore;
-    
+    IBlackPantherState EndGameState, PlayGameState, BlackPantherState;
    
     public TChalla(){
         isFighterMoved = false;
         isSwordscore=false;
+        PlayGameState = new PlayGameState(this); // * state pattern 1*
+        EndGameState = new EndGameState(this); // * state pattern 1*
+        BlackPantherState = PlayGameState;
     }
    
     /**
@@ -29,7 +32,7 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
          checkCollision();
         KeyMovements(); 
         attackWeapon();
-
+        stopGame();
         
     }    
     
@@ -77,7 +80,25 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
             checkCollision();
         }
     }
+        public void stopGameForScore(int score) {
+        
+        if(score == 200) {
+        	setState(PlayGameState);
+        	display();
+        	Greenfoot.stop();
+        }
+ 
+    }
     
+    
+    public void stopGame() {
+        if(((HealthScore)observer).getHealth() < 1) {
+        	setState(EndGameState);
+        	display();
+        	Greenfoot.stop();
+        }
+   
+    }
     public void attackWeapon()
     {
         if(counter.timeElapsed()> 400 )
@@ -141,6 +162,23 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
     }
    
     public void displayWeaponCount() {
+    }
+      public void display() {
+        BlackPantherState.display();
+    }
+    void setState(IBlackPantherState state) {
+    	
+        this.BlackPantherState = state;
+        
+        System.out.println("State set to: "+ this.BlackPantherState);
+    }
+    IBlackPantherState getPlayGameState()
+    {
+        return PlayGameState; //BlackPantherState 
+    }    
+    IBlackPantherState getEndGameState()
+    {
+        return EndGameState;  //BlackPantherState
     }
 }
 

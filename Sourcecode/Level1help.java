@@ -35,6 +35,7 @@ public class Level1help extends World
     {
        //setBackground(gif.getCurrentImage());
        backgroundMusic.playLoop();
+       setBackground(new GreenfootImage("welcomepage.jpg"));
         //if(Greenfoot.mouseClicked(buttonPlay) && backgroundMusic.isPlaying())
            // backgroundMusic.stop();
     }
