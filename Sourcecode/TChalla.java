@@ -1,4 +1,4 @@
-   import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Fighter here.
@@ -13,7 +13,7 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
     Counter counter = new Counter();
     Weapon sword;
     boolean isSwordscore;
-     
+    
    
     public TChalla(){
         isFighterMoved = false;
@@ -87,10 +87,11 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
             World  world =  this.getWorld();
             Weapon sword = new Weapon();
             world.addObject(sword, this.getX()+this.getImage().getWidth()/2+20   , this.getY()); 
+            Greenfoot.playSound("SwordThrow.wav ");
             counter.timer();
             isSwordscore = true;
             notifyObservers(-10);
-            
+             
             }
             
         }    

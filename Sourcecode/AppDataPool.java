@@ -1,4 +1,4 @@
-/**
+ /**
  * Write a description of class AppDataPool here.
  * 
  * @author (your name) 
@@ -19,7 +19,7 @@ public class AppDataPool
     public void setHealthScore(HealthScore hc){
         healthScore = hc;
     }
-    public HealthScore getHealthScore(){
+    public HealthScore getHealthScore(){ 
         return healthScore;
     }
     /**

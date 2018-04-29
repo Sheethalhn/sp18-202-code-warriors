@@ -1,4 +1,4 @@
-   import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Weapon here.
@@ -10,10 +10,11 @@ public class Weapon extends Players implements ISubject
 {
     IObserver observer; 
     ScoreBoard scoreBoard =  ScoreBoard.getInstance();
+    Counter c = new Counter();
     public Weapon()
     {
           scoreBoard.attach(this);
-          this.registerObserver(scoreBoard); 
+          this.registerObserver(scoreBoard);  
     }
     public void act() 
     {
@@ -26,7 +27,7 @@ public class Weapon extends Players implements ISubject
     {
          if(isTouching(Rocket.class))
          {  
-
+            destructImage();
             removeTouching(Rocket.class);
             notifyObservers(20);
             getWorld().removeObject(this);
@@ -36,6 +37,7 @@ public class Weapon extends Players implements ISubject
          else if(isTouching(Fire.class))
          {   
 
+            destructImage();
             removeTouching(Fire.class);
             notifyObservers(20);
             getWorld().removeObject(this);
@@ -45,7 +47,7 @@ public class Weapon extends Players implements ISubject
          }
          else  if(isTouching(Sword.class))
          {  
-
+            destructImage();
             removeTouching(Sword.class);
             notifyObservers(20);
             getWorld().removeObject(this); 
@@ -57,7 +59,13 @@ public class Weapon extends Players implements ISubject
             getWorld().removeObject(this);
         } 
     }
-         
+     
+        public void destructImage()
+        {
+            Destruction image = new Destruction();
+            getWorld().addObject(image,getX()+35 ,getY()); 
+           
+        }
         
      public void notifyObservers(int points)
      {
