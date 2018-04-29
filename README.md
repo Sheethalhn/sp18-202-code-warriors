@@ -20,6 +20,15 @@ Level 1 Welcome Page (level1help - world) - Start button will start the game lev
 
 Level1 - (work in progress) - Attack new enemies using the swords. There are 3 types of enemies. Attacking with sword increases game points and reduces sword count. Not attacking and colliding directly with an enemy reduces health. When sword score reaches zero, Blackpanther is unable to attack with swords. (He can choose to switch mode to level0 to increment sword score?)
 
+## Week 4 (4/28/2017): Minutes of the meeting
+
+1.  What did the team do the past week? The team implemented initial level where our fighter has to collect heart crystals to increase his health and collect swords to fight against enemies. Hero can now shoot sword against enemies.
+
+2.  What is the team going to do next week? The team has been allocated artifacts work. As we are closer to the submission, State Pattern and game ending will be implemented this week.
+
+3.  What are the current blockers/challenges the team is facing? Team is not facing any issues.
+
+XP Core Value - Communication
 
 ## Week 3 (4/21/2017): Minutes of the meeting
 
@@ -28,6 +37,8 @@ Level1 - (work in progress) - Attack new enemies using the swords. There are 3 t
 2.  What is the team going to do next week? The team decided to implement State pattern and a initial level where our fighter has to collect heart crystals to increase his health and collect swords to fight against enemies in next level.Decided to implement attack by hero on his enemies.  
 
 3.  What are the current blockers/challenges the team is facing? Team is facing code integration issues.
+
+XP Core Value - Respect
 
 
 ## Week 2 (4/14/2017): Minutes of the meeting
@@ -38,6 +49,8 @@ Level1 - (work in progress) - Attack new enemies using the swords. There are 3 t
 
 3.  What are the current blockers/challenges the team is facing? Team is facing code integration issues.
 
+XP Core Value - Communication
+
 
 ## Week 1 (4/2/2017): Minutes of the meeting
 
@@ -46,3 +59,6 @@ Level1 - (work in progress) - Attack new enemies using the swords. There are 3 t
 2.  What is the team going to do next week? The team have to come up with game idea and use cases. Decided to develop a simple game on Greenfoot to get a better understanding on how it works.
 
 3.  What are the current blockers/challenges the team is facing? Game Development is a new concept for everyone and have to learn Greenfoot for this project.
+
+XP Core Value - Courage
+
