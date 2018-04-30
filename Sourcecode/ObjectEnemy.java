@@ -11,7 +11,7 @@ public class ObjectEnemy extends Players implements ISubject
     IObserver observer;
     boolean isFighterMoved;
     boolean isHealtScore;
-   
+    GifImage hero = new GifImage("panthergif.gif");
     public ObjectEnemy(){
         isHealtScore = true;
         isFighterMoved = false;
@@ -25,7 +25,7 @@ public class ObjectEnemy extends Players implements ISubject
     {
         String worldname = getWorld().getClass().getName();
         if (worldname == "Level0")
-        setImage(new GreenfootImage("Black_Panther.png"));
+        setImage(hero.getCurrentImage());
       
        checkCollision();
         if (Greenfoot.mousePressed(this) && !isFighterMoved)

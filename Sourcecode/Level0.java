@@ -40,10 +40,9 @@ public class Level0 extends World
         bgImage = new GreenfootImage(getBackground());
         bgBase = new GreenfootImage(picWidth, getHeight());
         bgBase.drawImage(bgImage, 0, 0);
-        
-        
         objectEnemy = new ObjectEnemy();
         healthScore =  new HealthScore();
+        //setBackground(hero.getCurrentImage());
         
         fire = new Fire();
         sword = new Sword();
@@ -56,8 +55,9 @@ public class Level0 extends World
         objectEnemy.registerObserver(healthScore);
     }
     public void act() { 
-      
         
+
+       
         if(!backgroundMusic.isPlaying())
         {
             backgroundMusic.playLoop();
