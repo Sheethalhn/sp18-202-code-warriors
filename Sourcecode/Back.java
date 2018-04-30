@@ -21,10 +21,11 @@ public class Back extends Button
      */
     public void act() 
     {
+ 
         this.click();
     }    
     
-    /**
+    /** 
      * Close the window to see the menu again.
      */
     public void click()

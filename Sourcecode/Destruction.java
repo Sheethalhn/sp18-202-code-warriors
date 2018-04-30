@@ -19,7 +19,7 @@ public class Destruction extends Actor
        
     public void act() 
     {
-
+       setImage(new GreenfootImage("explosion.png"));
        if(c.timeElapsed()>250)
        {
             getWorld().removeObject(this);
