@@ -9,3 +9,5 @@ Implemented the movements of the actor Black Panther.
 04/23/2018 Made progress on level 0. Collecting crystal heart increases health score, while colliding with fireballs decreases it. Collecting swords increases swords count. BlackPanther is given a short time within which he can build up the scores and prepare for level1. Added welcome page for next level - level 1.
 
 04/27/2018 Added increment and decrement logic for health and sword score using extension of observer pattern used. Sword shooting will stop at sword score 0. Need to decide with team game end logic. State Pattern will be implemented accordingly. Added and changed object images as required.
+
+04/29/2018 Implemeted State Design Pattern for Game End logic. If health is zero then players loses and game ends, If score reaches 200 then player wins and game ends.

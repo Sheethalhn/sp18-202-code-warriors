@@ -18,7 +18,11 @@ Level0 - Collect heart crystal and build life, avoid health damage by avoinding 
 
 Level 1 Welcome Page (level1help - world) - Start button will start the game level 1. Help button will give instructions for level 1.
 
-Level1 - (work in progress) - Attack new enemies using the swords. There are 3 types of enemies. Attacking with sword increases game points and reduces sword count. Not attacking and colliding directly with an enemy reduces health. When sword score reaches zero, Blackpanther is unable to attack with swords. (He can choose to switch mode to level0 to increment sword score?)
+Level1 - Attack new enemies using swords. There are 3 types of enemies. Attacking with sword increases game points and reduces sword count. Not attacking and colliding directly with an enemy reduces health. 
+
+If health is zero then players loses and game ends, If score reaches 200 then player wins and game ends.
+
+When sword score reaches zero, Blackpanther is unable to attack with swords. (He can choose to switch mode to level0 to increment sword score(in progress))
 
 ## Week 4 (4/28/2017): Minutes of the meeting
 
