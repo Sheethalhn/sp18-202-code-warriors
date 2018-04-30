@@ -32,7 +32,7 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
          checkCollision();
         KeyMovements(); 
         attackWeapon();
-        stopGame();
+        //stopGame();
         
     }    
     
@@ -80,23 +80,27 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
             checkCollision();
         }
     }
-        public void stopGameForScore(int score) {
+        public boolean stopGameForScore(int score) {
         
-        if(score == 200) {
+        if(score >= 200) {
         	setState(PlayGameState);
         	display();
         	Greenfoot.stop();
+        	return true;
         }
+        return false;
  
     }
     
     
-    public void stopGame() {
+    public boolean stopGame() {
         if(((HealthScore)observer).getHealth() < 1) {
         	setState(EndGameState);
         	display();
         	Greenfoot.stop();
+        	return true;
         }
+        return false;
    
     }
     public void attackWeapon()
@@ -170,7 +174,7 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
     	
         this.BlackPantherState = state;
         
-        System.out.println("State set to: "+ this.BlackPantherState);
+        //System.out.println("State set to: "+ this.BlackPantherState);
     }
     IBlackPantherState getPlayGameState()
     {

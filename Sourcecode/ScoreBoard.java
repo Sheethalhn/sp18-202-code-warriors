@@ -25,7 +25,7 @@ public class ScoreBoard extends Actor implements IObserver
             
     }
     
-    private ScoreBoard() {
+    public ScoreBoard() {
         score = 0;
         //GreenfootImage scoreBoardImage = getImage();
         //scoreBoardImage.scale(scoreBoardImage.getWidth(), scoreBoardImage.getHeight());
@@ -35,13 +35,17 @@ public class ScoreBoard extends Actor implements IObserver
     {
         showScore();
     }    
-    private void showScore()
+    public void showScore()
     {
         getWorld().showText("Score: " + score, 900, 35);
     }
     public int getScore()
     {
         return score;
+    }
+    public void setScore(int scr)
+    {
+        score = scr;
     }
     public void addScore(int points){
         score+=points;

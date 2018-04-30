@@ -32,7 +32,7 @@ public class PlayGameState implements IBlackPantherState
     
     public void display()
     {
-    	System.out.println("Win Score acheived - Win and End Game");
-        tchalla.getWorld().addObject(new GameOverScreen("GameOverWin.png"),500,300);
+    	//System.out.println("Win Score acheived - Win and End Game");
+        tchalla.getWorld().addObject(new GameOverScreen("GameOverWin.jpeg"),500,300);
     }
 }

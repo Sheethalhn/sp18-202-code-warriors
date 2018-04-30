@@ -31,7 +31,7 @@ public class EndGameState implements IBlackPantherState
     
     public void display()
     {
-    	System.out.println("Health Finish State - Lose and End Game");
-    	tchalla.getWorld().addObject(new GameOverScreen("GameOverLose.png"), 500, 125);
+    	//System.out.println("Health Finish State - Lose and End Game");
+    	tchalla.getWorld().addObject(new GameOverScreen("GameOverLose.jpeg"), 500, 300);
     }
 }

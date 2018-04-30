@@ -91,8 +91,17 @@ public class Level1 extends World
             }
         }
          if (tChalla != null) {
-            tChalla.stopGameForScore(scoreBoard.getScore());
+           if (tChalla.stopGameForScore(scoreBoard.getScore())){
+               
+               scoreBoard.setScore(0);
+               removeObject(scoreBoard);
+            }
+            if(tChalla.stopGame()) {
+                
+                scoreBoard.setScore(0);
+                removeObject(scoreBoard);
         }
+    }
     }
     
     private void paint(int position)
