@@ -14,7 +14,6 @@ public class Level0 extends World
      * 
      */
     private ObjectEnemy objectEnemy;
-    private BlackPanther blackPanther;
     private HealthScore healthScore;
     private Rocket rocket;
     private Fire fire;

@@ -14,16 +14,14 @@ public class Level1 extends World
      * 
      */
     private TChalla tChalla;
-    private BlackPanther blackPanther;
     private ScoreBoard scoreBoard;
     private Rocket rocket;
     private Fire fire;
     private Sword sword;
-    private Switch textButton = null;
     public int count = 0;
     GreenfootSound backgroundMusic = new GreenfootSound("1.mp3");
     private static final String bgImageName = "Wakandaimage.jpg";    //level1
-    private static final double scrollSpeed = 5;
+    private static final double scrollSpeed = 10;
     private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;
@@ -48,10 +46,8 @@ public class Level1 extends World
         rocket = new Rocket();
         fire = new Fire();
         sword = new Sword();
-        textButton = new Switch("SwitchMode");
         addObject(tChalla, 100, 200);
         addObject(scoreBoard, 850, 35);
-        addObject(textButton, 600, 35);
         addObject(healthScore,750,35);
         scoreBoard.attach(tChalla);
         
@@ -82,14 +78,14 @@ public class Level1 extends World
         }
             
   
-        if(textButton.gotClicked()) {
-            count++; 
-            if (count % 2 != 0) {
-                changeHeroSwordMode();
-            }else{
-                changeHeroMode();
-            }
-        }
+       // if(textButton.gotClicked()) {
+       //     count++; 
+       //     if (count % 2 != 0) {
+       //         changeHeroSwordMode();
+       //     }else{
+       //         changeHeroMode();
+       //     }
+       // }
          if (tChalla != null) {
            if (tChalla.stopGameForScore(scoreBoard.getScore())){
                
@@ -110,21 +106,6 @@ public class Level1 extends World
         bg.drawImage(bgBase, position, 0);
         bg.drawImage(bgImage, position + picWidth, 0);
     } 
-    
-    public void changeHeroSwordMode() {
-        blackPanther = new BlackPanther();
-        addObject(blackPanther, 100, 200);
-        removeObject(tChalla);
-        scoreBoard.attach(blackPanther);
-        blackPanther.registerObserver(scoreBoard);
-    }
-    
-    public void changeHeroMode() {
-        addObject(tChalla, 100, 200); 
-        removeObject(blackPanther);
-        scoreBoard.attach(tChalla);
-        tChalla.registerObserver(scoreBoard);
-    }
     
     public void createEnemy()
     {

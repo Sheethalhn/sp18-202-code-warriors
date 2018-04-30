@@ -6,7 +6,7 @@
  * @author (Manisha) 
  * @version (a version number or a date)
  */
-public class  TChalla extends Players implements ISubject, AttackDecorator
+public class  TChalla extends Players implements ISubject
 {
     IObserver observer; 
     boolean isFighterMoved;
@@ -112,7 +112,7 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
             World  world =  this.getWorld();
             Weapon sword = new Weapon();
             world.addObject(sword, this.getX()+this.getImage().getWidth()/2+20   , this.getY()); 
-            Greenfoot.playSound("SwordThrow.wav ");
+            //Greenfoot.playSound("SwordThrow.wav ");
             counter.timer();
             isSwordscore = true;
             notifyObservers(-10);
@@ -162,11 +162,11 @@ public class  TChalla extends Players implements ISubject, AttackDecorator
         observer = o;
     } 
    
-    public void collectWeapons() {
-    }
+   // public void collectWeapons() {
+   // }
    
-    public void displayWeaponCount() {
-    }
+   // public void displayWeaponCount() {
+   // }
       public void display() {
         BlackPantherState.display();
     }
