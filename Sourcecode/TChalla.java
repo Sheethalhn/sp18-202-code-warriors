@@ -131,7 +131,6 @@ public class  TChalla extends Players implements ISubject
             Level1 level1 = (Level1)getWorld(); 
             isSwordscore = false;
             notifyObservers(-20);
-            collectWeapons(); 
         }
         else if(isTouching(Fire.class))
         {
@@ -139,7 +138,6 @@ public class  TChalla extends Players implements ISubject
             Level1 level1 = (Level1)getWorld(); 
             isSwordscore = false;
             notifyObservers(-20);
-            collectWeapons(); 
         }
         else if(isTouching(Sword.class))
         { 
@@ -147,7 +145,6 @@ public class  TChalla extends Players implements ISubject
             Level1 level1 = (Level1)getWorld();
             isSwordscore = false;
             notifyObservers(-20);
-            collectWeapons();
         }
     }
     
