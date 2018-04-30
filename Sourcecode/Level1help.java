@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+ 
 /**
  * Write a description of class Menu here.
  * 
@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Level1help extends World
 {
-    private static final int GAME_SPEED = 50;
+    private static final int GAME_SPEED = 50; 
     private GreenfootSound backgroundMusic;  
    // private GifImage gif = new GifImage("blackback.gif");
     private ButtonPlay buttonPlay;
@@ -20,7 +20,7 @@ public class Level1help extends World
      * Constructor for objects of class Menu.
      * 
      */
-    public Level1help()
+    public Level1help()  
     {    
         super(1000, 600, 1); 
         backgroundMusic = new GreenfootSound("1.mp3");

@@ -11,3 +11,4 @@ public class FireFactory extends EnemyFactory
        return new Fire();
    }
 }
+ 

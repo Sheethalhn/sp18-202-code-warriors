@@ -1,4 +1,4 @@
-  import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class AttackObject here.
@@ -6,7 +6,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Rocket extends Enemy 
+public class Rocket  extends Players implements Enemy
 {
     /**
      * Act - do whatever the AttackObject wants to do. This method is called whenever
@@ -21,9 +21,12 @@ public class Rocket extends Enemy
         setImage(new GreenfootImage("greengem.jpg"));
         else if (worldname == "Level1")
         setImage(new GreenfootImage("Rocketlevel1.png"));
- 
-        super.act(); 
-
+        setLocation(getX()-8, getY());                            
+        if (getX() == 0) 
+        {
+            getWorld().removeObject(this);
+        }
+   
     }    
  
 

@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class MyWorld here.
@@ -119,15 +119,35 @@ public class Level1 extends World
     
     public void createEnemy()
     {
-        EnemyFactory theEnemyFactory = new EnemyFactory();
+    
         Enemy theEnemy = null;       
         int category = Greenfoot.getRandomNumber(3);
        if(category >= 0)
        {
-           theEnemy = theEnemyFactory.EnemyCategory(category);           
-           addObject(theEnemy, getWidth(), Greenfoot.getRandomNumber(600));           
-       }    
+        if(category == 0)
+        {
+            RocketFactory newRocketFactory = new RocketFactory();
+            theEnemy = newRocketFactory.EnemyCategory();
+            //return newEnemy;
+        }
         
+        else if(category == 1)
+        {
+            SwordFactory newSwordFactory = new SwordFactory();
+            theEnemy = newSwordFactory.EnemyCategory();
+            //return newEnemy;
+        }
+        
+        else if(category == 2)
+        {
+            FireFactory newFireFactory = new FireFactory();
+            theEnemy = newFireFactory.EnemyCategory();
+            //return newEnemy;   
+        }        
+           addObject((Players)theEnemy, getWidth(), Greenfoot.getRandomNumber(600)); 
+       }  
+
+
         
     }
    
