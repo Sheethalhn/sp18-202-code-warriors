@@ -11,7 +11,7 @@ public class ObjectEnemy extends Players implements ISubject
     IObserver observer;
     boolean isFighterMoved;
     boolean isHealtScore;
-    GifImage hero = new GifImage("panthergif.gif");
+    GifImage hero = new GifImage("panthergif1.gif");
     public ObjectEnemy(){
         isHealtScore = true;
         isFighterMoved = false;
