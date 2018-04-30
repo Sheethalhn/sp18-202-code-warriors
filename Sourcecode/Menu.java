@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Menu extends World
 {
-    private static final int GAME_SPEED = 50;
     private GreenfootSound backgroundMusic;  
     //private GifImage gif = new GifImage("blackback.gif");
     private ButtonPlay buttonPlay;
@@ -56,7 +55,6 @@ public class Menu extends World
                 public void performAction()
                 {
                     if(Greenfoot.mouseClicked(buttonPlay)){
-                        //clicSound.play();
                         Greenfoot.setWorld(new Level0());
                     }
             }
@@ -68,7 +66,6 @@ public class Menu extends World
                 public void performAction()
                 {
                         if(Greenfoot.mouseClicked(buttonHelp)){
-                                //clicSound.play();
                                 Help help = buttonHelp.getHelp();
                                 addObject(help, getWidth()/2, getHeight()/2);
                                         

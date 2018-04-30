@@ -1,6 +1,7 @@
 #Greenfoot project file
 =\=\=\=\=\=\=
 class.AppDataPool.superclass=
+class.Back.image=back.png
 class.Back.superclass=Button
 class.BlackPanther.superclass=TChalla
 class.BoostDecorator.superclass=
@@ -24,6 +25,7 @@ class.FireFactory.superclass=EnemyFactory
 class.GameOverScreen.superclass=greenfoot.Actor
 class.GifImage.superclass=
 class.HealthScore.superclass=greenfoot.Actor
+class.Help.image=help_details.jpg
 class.Help.superclass=greenfoot.Actor
 class.HelpCommand.superclass=
 class.IBlackPantherState.superclass=
@@ -371,8 +373,8 @@ dependency99.from=TChalla
 dependency99.to=IBlackPantherState
 dependency99.type=UsesDependency
 editor.fx.0.height=838
-editor.fx.0.width=1154
-editor.fx.0.x=286
+editor.fx.0.width=564
+editor.fx.0.x=876
 editor.fx.0.y=23
 editor.fx.1.height=737
 editor.fx.1.width=814

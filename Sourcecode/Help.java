@@ -14,7 +14,6 @@ public class Help extends Actor
      */
     public void act() 
     {
-        setImage(new GreenfootImage("help_details.jpg"));
         
     }    
 }
