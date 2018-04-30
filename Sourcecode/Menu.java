@@ -8,12 +8,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Menu extends World
 {
+    //private static final int GAME_SPEED = 50;
     private GreenfootSound backgroundMusic;  
     //private GifImage gif = new GifImage("blackback.gif");
     private ButtonPlay buttonPlay;
     private ButtonHelp buttonHelp;
+    private ButtonStory buttonStory;
     private PlayCommand playCmd;
     private HelpCommand helpCmd;
+    private StoryCommand storyCmd;
     protected GreenfootSound clicSound;
     /**
      * Constructor for objects of class Menu.
@@ -25,8 +28,10 @@ public class Menu extends World
         backgroundMusic = new GreenfootSound("1.mp3");
         buttonPlay = new ButtonPlay();
         buttonHelp = new ButtonHelp();
+        buttonStory = new ButtonStory();
         playCmd = new PlayCommand();
         helpCmd = new HelpCommand();
+        storyCmd = new StoryCommand();
         prepare();
     }
     
@@ -44,12 +49,13 @@ public class Menu extends World
     public void prepare()
     {
         addObject(buttonPlay, 600, 250);
-        addObject(buttonHelp, 600, 350);        
+        addObject(buttonHelp, 600, 350);
+        addObject(buttonStory, 600, 450);        
         buttonPlay.setCommand(playCmd);
         buttonHelp.setCommand(helpCmd);
+        buttonStory.setCommand(storyCmd);
         
         playCmd.setReceiver(
-      
             new Receiver()
             {
                 public void performAction()
@@ -72,6 +78,24 @@ public class Menu extends World
                                 addObject(new Back(help), 
                                                 help.getX() - help.getImage().getWidth()/2,
                                                 help.getY() - help.getImage().getHeight()/2);
+                                
+                            }
+                }
+           }
+        );
+        
+        storyCmd.setReceiver(
+        new Receiver()
+            {
+                public void performAction()
+                {
+                        if(Greenfoot.mouseClicked(buttonStory)){
+                                Story story = buttonStory.getStory();
+                                addObject(story, getWidth()/2, getHeight()/2);
+                                        
+                                addObject(new Back(story), 
+                                                story.getX() - story.getImage().getWidth()/2,
+                                                story.getY() - story.getImage().getHeight()/2);
                                 
                             }
                 }
