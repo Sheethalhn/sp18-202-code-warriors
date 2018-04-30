@@ -6,7 +6,7 @@
  * @author (Manisha) 
  * @version (a version number or a date)
  */
-public class  ObjectEnemy extends Players implements ISubject, AttackDecorator
+public class ObjectEnemy extends Players implements ISubject
 {
     IObserver observer;
     boolean isFighterMoved;
@@ -78,7 +78,6 @@ public class  ObjectEnemy extends Players implements ISubject, AttackDecorator
             Level0 level0 = (Level0)getWorld(); 
             isHealtScore = true;
             notifyObservers(20);
-            collectWeapons(); 
         }
         else if(isTouching(Fire.class))
         {
@@ -86,7 +85,6 @@ public class  ObjectEnemy extends Players implements ISubject, AttackDecorator
             Level0 level0 = (Level0)getWorld();
             isHealtScore = true;
             notifyObservers(-20);
-            collectWeapons(); 
         }
         else if(isTouching(Sword.class))
         {
@@ -94,7 +92,6 @@ public class  ObjectEnemy extends Players implements ISubject, AttackDecorator
             Level0 level0 = (Level0)getWorld();
             isHealtScore = false;
             notifyObservers(20);
-            collectWeapons();
         }
     }
     
@@ -116,10 +113,6 @@ public class  ObjectEnemy extends Players implements ISubject, AttackDecorator
         observer = o;
     } 
    
-    public void collectWeapons() {
-    }
-   
-    public void displayWeaponCount() {
-    }
+
 }
 

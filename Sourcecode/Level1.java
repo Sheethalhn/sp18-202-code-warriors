@@ -18,6 +18,7 @@ public class Level1 extends World
     private Rocket rocket;
     private Fire fire;
     private Sword sword;
+    private Star star;
     public int count = 0;
     GreenfootSound backgroundMusic = new GreenfootSound("1.mp3");
     private static final String bgImageName = "Wakandaimage.jpg";    //level1
@@ -26,7 +27,6 @@ public class Level1 extends World
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;
     private int counter = 0;
-    
     private HealthScore healthScore;
 
 
@@ -46,6 +46,7 @@ public class Level1 extends World
         rocket = new Rocket();
         fire = new Fire();
         sword = new Sword();
+        star = new Star();
         addObject(tChalla, 100, 200);
         addObject(scoreBoard, 850, 35);
         addObject(healthScore,750,35);
@@ -54,6 +55,7 @@ public class Level1 extends World
         healthScore.attach(tChalla);
         tChalla.registerObserver(scoreBoard);
         tChalla.registerObserver(healthScore);
+
         
     }
    
@@ -75,6 +77,7 @@ public class Level1 extends World
         {
             createEnemy();
             counter=0;
+            count++;
         }
             
   
@@ -86,6 +89,9 @@ public class Level1 extends World
        //         changeHeroMode();
        //     }
        // }
+        if (count <= 5) {
+            addObject((Players)star, getWidth(), Greenfoot.getRandomNumber(600)); 
+        }
          if (tChalla != null) {
            if (tChalla.stopGameForScore(scoreBoard.getScore())){
                
@@ -134,7 +140,8 @@ public class Level1 extends World
             theEnemy = newFireFactory.EnemyCategory();
             //return newEnemy;   
         }        
-           addObject((Players)theEnemy, getWidth(), Greenfoot.getRandomNumber(600)); 
+         addObject((Players)theEnemy, getWidth(), Greenfoot.getRandomNumber(600)); 
+  
        }  
 
 

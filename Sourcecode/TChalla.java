@@ -6,7 +6,7 @@
  * @author (Manisha) 
  * @version (a version number or a date)
  */
-public class  TChalla extends Players implements ISubject
+public class TChalla extends Players implements ISubject, BoostDecorator
 {
     IObserver observer; 
     boolean isFighterMoved;
@@ -14,6 +14,12 @@ public class  TChalla extends Players implements ISubject
     Weapon sword;
     boolean isSwordscore;
     IBlackPantherState EndGameState, PlayGameState, BlackPantherState;
+    int count = 0;
+    public GreenfootImage image1 = new GreenfootImage("panthergrow1.png");
+    public GreenfootImage image2 = new GreenfootImage("panthergrow2.png");
+    public GreenfootImage image3 = new GreenfootImage("panthergrow3.png");
+    public GreenfootImage image4 = new GreenfootImage("panthergrow4.png");
+    public GreenfootImage image5 = new GreenfootImage("panthergrow5.png");
    
     public TChalla(){
         isFighterMoved = false;
@@ -29,7 +35,7 @@ public class  TChalla extends Players implements ISubject
      */
     public void act() 
     {
-         checkCollision();
+        checkCollision();
         KeyMovements(); 
         attackWeapon();
         //stopGame();
@@ -80,13 +86,14 @@ public class  TChalla extends Players implements ISubject
             checkCollision();
         }
     }
-        public boolean stopGameForScore(int score) {
+    
+    public boolean stopGameForScore(int score) {
         
         if(score >= 200) {
-        	setState(PlayGameState);
-        	display();
-        	Greenfoot.stop();
-        	return true;
+            setState(PlayGameState);
+            display();
+            Greenfoot.stop();
+            return true;
         }
         return false;
  
@@ -95,10 +102,10 @@ public class  TChalla extends Players implements ISubject
     
     public boolean stopGame() {
         if(((HealthScore)observer).getHealth() < 1) {
-        	setState(EndGameState);
-        	display();
-        	Greenfoot.stop();
-        	return true;
+            setState(EndGameState);
+            display();
+            Greenfoot.stop();
+            return true;
         }
         return false;
    
@@ -146,6 +153,15 @@ public class  TChalla extends Players implements ISubject
             isSwordscore = false;
             notifyObservers(-20);
         }
+        
+        else if(isTouching(Star.class))
+        { 
+            removeTouching(Star.class);
+            Level1 level1 = (Level1)getWorld();
+            isSwordscore = false;
+            count++;
+            boost();
+        }
     }
     
     public void notifyObservers(int points){
@@ -159,16 +175,12 @@ public class  TChalla extends Players implements ISubject
         observer = o;
     } 
    
-   // public void collectWeapons() {
-   // }
-   
-   // public void displayWeaponCount() {
-   // }
+  
       public void display() {
         BlackPantherState.display();
     }
     void setState(IBlackPantherState state) {
-    	
+        
         this.BlackPantherState = state;
         
         //System.out.println("State set to: "+ this.BlackPantherState);
@@ -181,5 +193,25 @@ public class  TChalla extends Players implements ISubject
     {
         return EndGameState;  //BlackPantherState
     }
+    
+    public void boost(){
+       if (count == 1){
+        setImage(image1);
+       }
+       if (count == 2){
+        setImage(image2);
+       }
+       if (count == 3){
+        setImage(image3);
+       }
+       if (count == 4){
+        setImage(image4);
+       }
+       if (count == 5){
+        setImage(image5);
+       }
+       
+    }
+    
 }
 
