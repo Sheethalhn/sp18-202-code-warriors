@@ -21,8 +21,8 @@ public class Level1 extends World
     private Star star;
     public int count = 0;
     GreenfootSound backgroundMusic = new GreenfootSound("1.mp3");
-    private static final String bgImageName = "Wakandaimage.jpg";    //level1
-    private static final double scrollSpeed = 10;
+    private static final String bgImageName = "wakanda2.jpg";    //level1
+    private static final double scrollSpeed = 5;
     private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
     private GreenfootImage bgImage, bgBase;
     private int scrollPosition = 0;

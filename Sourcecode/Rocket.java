@@ -18,7 +18,7 @@ public class Rocket  extends Players implements Enemy
         //World worlda = getWorld();
         String worldname = getWorld().getClass().getName();
         if (worldname == "Level0")
-        setImage(new GreenfootImage("greengem.jpg"));
+        setImage(new GreenfootImage("vibranium.png"));
         else if (worldname == "Level1")
         setImage(new GreenfootImage("Rocketlevel1.png"));
         setLocation(getX()-8, getY());                            
