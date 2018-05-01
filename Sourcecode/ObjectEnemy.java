@@ -1,4 +1,4 @@
-  import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Fighter here.
@@ -47,22 +47,30 @@ public class ObjectEnemy extends Players implements ISubject
         }
        
         if (Greenfoot.isKeyDown("up")) {
-            setLocation(getX(), getY() - 7);
+           
+            if(this.getY()-this.getImage().getHeight()/2 > 0)
+                this.setLocation(this.getX(), this.getY() - 5);
             isFighterMoved = true;
             checkCollision();
+            
         }
         if (Greenfoot.isKeyDown("down")) {
-            setLocation(getX(), getY() + 7);
+            if(this.getY()+this.getImage().getHeight()/2 < getWorld().getHeight())
+                this.setLocation(this.getX(), this.getY() + 5);
+            isFighterMoved = true;
+            
+            checkCollision();
+        } 
+        if (Greenfoot.isKeyDown("left")) {
+            if(this.getX()-this.getImage().getWidth()/2 > 0)
+                this.setLocation(this.getX() - 5, this.getY());
             isFighterMoved = true;
             checkCollision();
-        }
-        if (Greenfoot.isKeyDown("left")) {
-            move(-7);
-            isFighterMoved = true;
-            checkCollision(); 
+            
         }
         if (Greenfoot.isKeyDown("right")) {
-            move(7);
+            if(this.getX()+this.getImage().getWidth()/2 < getWorld().getWidth())
+                this.setLocation(this.getX() + 5,this.getY());
             isFighterMoved = true;
             checkCollision();
         }

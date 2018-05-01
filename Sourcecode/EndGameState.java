@@ -1,9 +1,4 @@
-/**
- * Write a description of class MeridaLostState here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+ import greenfoot.*; 
 public class EndGameState implements IBlackPantherState  
 {
     public TChalla tchalla;
@@ -32,6 +27,7 @@ public class EndGameState implements IBlackPantherState
     public void display()
     {
     	//System.out.println("Health Finish State - Lose and End Game");
-    	tchalla.getWorld().addObject(new GameOverScreen("GameOverLose.jpeg"), 500, 300);
+    	 tchalla.getWorld().addObject(new GameOverScreen("GameOver.png"), 500, 300);
+
     }
 }

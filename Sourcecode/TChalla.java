@@ -63,28 +63,34 @@ public class TChalla extends Players implements ISubject, BoostDecorator
         }
        
         if (Greenfoot.isKeyDown("up")) {
-            setLocation(getX(), getY() - 8);
+           
+            if(this.getY()-this.getImage().getHeight()/2 > 0)
+                this.setLocation(this.getX(), this.getY() - 5);
             isFighterMoved = true;
             checkCollision();
             
         }
         if (Greenfoot.isKeyDown("down")) {
-            setLocation(getX(), getY() + 8);
+            if(this.getY()+this.getImage().getHeight()/2 < getWorld().getHeight())
+                this.setLocation(this.getX(), this.getY() + 5);
             isFighterMoved = true;
             
             checkCollision();
-        }
+        } 
         if (Greenfoot.isKeyDown("left")) {
-            move(-8);
+            if(this.getX()-this.getImage().getWidth()/2 > 0)
+                this.setLocation(this.getX() - 5, this.getY());
             isFighterMoved = true;
             checkCollision();
             
         }
         if (Greenfoot.isKeyDown("right")) {
-            move(8);
+            if(this.getX()+this.getImage().getWidth()/2 < getWorld().getWidth())
+                this.setLocation(this.getX() + 5,this.getY());
             isFighterMoved = true;
             checkCollision();
         }
+        
     }
     
     public boolean stopGameForScore(int score) {

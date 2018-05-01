@@ -21,7 +21,7 @@ public class Level0 extends World
     //private Switch textButton = null;
     public int count = 0;
     GreenfootSound backgroundMusic = new GreenfootSound("1.mp3");
-    private static final String bgImageName = "wakanda1.png";    //level1
+    private static final String bgImageName = "Wakanda1.jpg";    //level1
     private static final double scrollSpeed = 5;
     private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
     private GreenfootImage bgImage, bgBase;
@@ -142,7 +142,7 @@ public class Level0 extends World
            enemyobjectCount++;
        }  
 
-       if(enemyobjectCount==20)
+       if(enemyobjectCount==150)
        {
            AppDataPool.getInstance().setHealthScore(healthScore);
            Greenfoot.setWorld(new Level1help());
