@@ -11,3 +11,5 @@ Implemented the movements of the actor Black Panther.
 04/27/2018 Added increment and decrement logic for health and sword score using extension of observer pattern used. Sword shooting will stop at sword score 0. Need to decide with team game end logic. State Pattern will be implemented accordingly. Added and changed object images as required.
 
 04/29/2018 Implemeted State Design Pattern for Game End logic. If health is zero then players loses and game ends, If score reaches 200 then player wins and game ends.
+
+05/02/2018 Made changes to State pattern to have restart/play game state when player loses.
