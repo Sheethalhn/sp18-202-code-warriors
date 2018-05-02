@@ -142,11 +142,16 @@ public class Level0 extends World
            enemyobjectCount++;
        }  
 
-       if(enemyobjectCount==120)
+       
+        if((enemyobjectCount>40) && healthScore.getHealth()<=0)
+       {
+           Greenfoot.setWorld(new Restartmenu());
+       
+    }
+    else if(enemyobjectCount==100)
        {
            AppDataPool.getInstance().setHealthScore(healthScore);
            Greenfoot.setWorld(new Level1help());
-           
        }
         //rocket.setImage("rocket.png");
         

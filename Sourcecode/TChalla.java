@@ -97,7 +97,7 @@ public class TChalla extends Players implements ISubject, BoostDecorator
     
     public boolean stopGameForScore(int score) {
         
-        if(score >= 220) {
+        if(score >= 320) {
             setState(WinGameState);
             display();
             Greenfoot.stop();
