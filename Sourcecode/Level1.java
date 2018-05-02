@@ -1,5 +1,5 @@
  import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+ 
 /**
  * Write a description of class MyWorld here.
  * 
@@ -60,7 +60,7 @@ public class Level1 extends World
     }
    
     public void act() { 
-       
+        long count = 0;
         
         if(!backgroundMusic.isPlaying())
         {
@@ -101,7 +101,8 @@ public class Level1 extends World
             if(tChalla.stopGame()) {
                 
                 scoreBoard.setScore(0);
-                removeObject(scoreBoard);
+                //removeObject(scoreBoard);
+                tChalla.restartGame();
         }
     }
     }

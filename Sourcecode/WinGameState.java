@@ -5,11 +5,11 @@ import greenfoot.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PlayGameState implements IBlackPantherState 
+public class WinGameState implements IBlackPantherState 
 {
    public TChalla tchalla;
 
-    public PlayGameState(TChalla tchalla)
+    public WinGameState(TChalla tchalla)
     {
         this.tchalla = tchalla;
     }
@@ -33,7 +33,6 @@ public class PlayGameState implements IBlackPantherState
     public void display()
     {
     	//System.out.println("Win Score acheived - Win and End Game");
-    	//Greenfoot.setWorld(new Restartmenu());
-        //tchalla.getWorld().addObject(new GameOverScreen("GameOver.png"),500,300);
+        tchalla.getWorld().addObject(new GameOverScreen("GameOverWin.jpeg"),500,300);
     }
 }

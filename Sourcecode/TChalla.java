@@ -1,4 +1,5 @@
      import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+     import java.util.concurrent.TimeUnit;
 
 /**
  * Write a description of class Fighter here.
@@ -13,7 +14,7 @@ public class TChalla extends Players implements ISubject, BoostDecorator
     Counter counter = new Counter();
     Weapon sword;
     boolean isSwordscore;
-    IBlackPantherState EndGameState, PlayGameState, BlackPantherState;
+    IBlackPantherState LoseGameState, PlayGameState, WinGameState, BlackPantherState;
     int count = 0;
     public GreenfootImage image1 = new GreenfootImage("panthergrow1.png");
     public GreenfootImage image2 = new GreenfootImage("panthergrow2.png");
@@ -24,8 +25,9 @@ public class TChalla extends Players implements ISubject, BoostDecorator
     public TChalla(){
         isFighterMoved = false;
         isSwordscore=false;
-        PlayGameState = new PlayGameState(this); // * state pattern 1*
-        EndGameState = new EndGameState(this); // * state pattern 1*
+        PlayGameState = new PlayGameState(this); // * state pattern 
+        LoseGameState = new LoseGameState(this); // * state pattern 
+        WinGameState = new WinGameState(this); // * state pattern 
         BlackPantherState = PlayGameState;
     }
    
@@ -95,8 +97,8 @@ public class TChalla extends Players implements ISubject, BoostDecorator
     
     public boolean stopGameForScore(int score) {
         
-        if(score >= 200) {
-            setState(PlayGameState);
+        if(score >= 220) {
+            setState(WinGameState);
             display();
             Greenfoot.stop();
             return true;
@@ -108,13 +110,17 @@ public class TChalla extends Players implements ISubject, BoostDecorator
     
     public boolean stopGame() {
         if(((HealthScore)observer).getHealth() < 1) {
-            setState(EndGameState);
+            setState(LoseGameState);
             display();
-            Greenfoot.stop();
             return true;
         }
         return false;
    
+    }
+    
+    public void restartGame()
+    {
+        setState(PlayGameState);
     }
     public void attackWeapon()
     {
@@ -128,7 +134,7 @@ public class TChalla extends Players implements ISubject, BoostDecorator
             //Greenfoot.playSound("SwordThrow.wav ");
             counter.timer();
             isSwordscore = true;
-            notifyObservers(-10);
+            notifyObservers(-1);
              
             }
             
@@ -195,11 +201,14 @@ public class TChalla extends Players implements ISubject, BoostDecorator
     {
         return PlayGameState; //BlackPantherState 
     }    
-    IBlackPantherState getEndGameState()
+    IBlackPantherState getLoseGameState()
     {
-        return EndGameState;  //BlackPantherState
+        return LoseGameState;  //BlackPantherState
     }
-    
+    IBlackPantherState getWinGameState()
+    {
+        return WinGameState;  //BlackPantherState
+    }
     public void boost(){
        if (count == 1){
         setImage(image1);

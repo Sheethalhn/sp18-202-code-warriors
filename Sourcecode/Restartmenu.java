@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Menu extends World
+public class Restartmenu extends World
 {
     private static final int GAME_SPEED = 50;
     private GreenfootSound backgroundMusic;  
@@ -22,7 +22,7 @@ public class Menu extends World
      * Constructor for objects of class Menu.
      * 
      */
-    public Menu()
+    public Restartmenu()
     {    
         super(1000, 600, 1); 
         backgroundMusic = new GreenfootSound("1.mp3");
@@ -37,7 +37,7 @@ public class Menu extends World
     
     public void act()
     {
-       //setBackground(gif.getCurrentImage());
+       setBackground("bprestart.jpg");
        backgroundMusic.playLoop();   
         //if(Greenfoot.mouseClicked(buttonPlay) && backgroundMusic.isPlaying())
            // backgroundMusic.stop();

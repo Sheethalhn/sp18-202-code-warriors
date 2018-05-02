@@ -1,9 +1,9 @@
  import greenfoot.*; 
-public class EndGameState implements IBlackPantherState  
+public class LoseGameState implements IBlackPantherState  
 {
     public TChalla tchalla;
 
-    public EndGameState(TChalla tchalla)
+    public LoseGameState(TChalla tchalla)
     {
         this.tchalla = tchalla;
     }
@@ -27,7 +27,8 @@ public class EndGameState implements IBlackPantherState
     public void display()
     {
     	//System.out.println("Health Finish State - Lose and End Game");
-    	 tchalla.getWorld().addObject(new GameOverScreen("GameOver.png"), 500, 300);
+    	Greenfoot.setWorld(new Restartmenu());
+    	//tchalla.getWorld().addObject(new GameOverScreen("GameOver.png"), 500, 300);
 
     }
 }

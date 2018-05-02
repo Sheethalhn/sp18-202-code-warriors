@@ -49,28 +49,28 @@ public class ObjectEnemy extends Players implements ISubject
         if (Greenfoot.isKeyDown("up")) {
            
             if(this.getY()-this.getImage().getHeight()/2 > 0)
-                this.setLocation(this.getX(), this.getY() - 5);
+                this.setLocation(this.getX(), this.getY() - 10);
             isFighterMoved = true;
             checkCollision();
             
         }
         if (Greenfoot.isKeyDown("down")) {
             if(this.getY()+this.getImage().getHeight()/2 < getWorld().getHeight())
-                this.setLocation(this.getX(), this.getY() + 5);
+                this.setLocation(this.getX(), this.getY() + 10);
             isFighterMoved = true;
             
             checkCollision();
         } 
         if (Greenfoot.isKeyDown("left")) {
             if(this.getX()-this.getImage().getWidth()/2 > 0)
-                this.setLocation(this.getX() - 5, this.getY());
+                this.setLocation(this.getX() - 10, this.getY());
             isFighterMoved = true;
             checkCollision();
             
         }
         if (Greenfoot.isKeyDown("right")) {
             if(this.getX()+this.getImage().getWidth()/2 < getWorld().getWidth())
-                this.setLocation(this.getX() + 5,this.getY());
+                this.setLocation(this.getX() + 10,this.getY());
             isFighterMoved = true;
             checkCollision();
         }
