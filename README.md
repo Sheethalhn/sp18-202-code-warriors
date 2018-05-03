@@ -10,6 +10,8 @@
 
 BurnDown Chart: https://docs.google.com/spreadsheets/d/1LbN_SoAt0a4o_AEu9KCI6MCBqQ4C8MlCEqgSjGNqUWA/
 
+Project Demo: https://docs.google.com/presentation/d/1T9UsEPZqf0XPrDOhSngI2MFKF2VpKg423AXMjSS5OYs/edit?usp=sharing
+
 ## Game flow is being described here for everyone's quick reference. This will be updated as progress occurs.
 
 Start page (Menu - world) - Start button will start the game level 0. Help button will give instructions for level 0.
