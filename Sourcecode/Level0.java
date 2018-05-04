@@ -13,7 +13,7 @@ public class Level0 extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    private ObjectEnemy objectEnemy;
+    private BlackPanther objectEnemy;
     private HealthScore healthScore;
     private Rocket rocket;
     private Fire fire;
@@ -40,7 +40,7 @@ public class Level0 extends World
         bgImage = new GreenfootImage(getBackground());
         bgBase = new GreenfootImage(picWidth, getHeight());
         bgBase.drawImage(bgImage, 0, 0);
-        objectEnemy = new ObjectEnemy();
+        objectEnemy = new BlackPanther();
         healthScore =  new HealthScore();
         //setBackground(hero.getCurrentImage());
         
