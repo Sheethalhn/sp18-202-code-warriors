@@ -20,3 +20,11 @@ Appeared in team discussion today and assigned a design pattern for each team me
 
 *(04/21/18)*
 Appeared in team meeting today. Discussed with the team members about progress of the project and further improvisations to be made.
+
+
+
+***Week4***
+
+
+*(04/25/18)*
+Communicated with the team to discuss further changes to be made and allocated artifacts to each other. I'll be doing use case specification.
