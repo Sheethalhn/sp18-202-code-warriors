@@ -39,8 +39,6 @@ public class Restartmenu extends World
     {
        setBackground("bprestart.jpg");
        backgroundMusic.playLoop();   
-        //if(Greenfoot.mouseClicked(buttonPlay) && backgroundMusic.isPlaying())
-           // backgroundMusic.stop();
     }
     
     /**

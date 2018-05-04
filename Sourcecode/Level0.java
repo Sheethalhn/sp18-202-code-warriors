@@ -84,31 +84,7 @@ public class Level0 extends World
         bg.drawImage(bgBase, position, 0);
         bg.drawImage(bgImage, position + picWidth, 0);
     } 
-    /*
-     public void createFire()
-    {
-        FireFactory theFireFactory = new FireFactory();
-        Enemy theEnemy = null;       
-        int category = Greenfoot.getRandomNumber(3);
-       
-           theEnemy = theFireFactory.EnemyCategory(category);           
-           addObject(theEnemy, getWidth(), Greenfoot.getRandomNumber(600));
-           enemyobjectCount++;
-       } 
-    
-    public void createGem()
-    {
-        GemFactory theGemFactory = new GemFactory();
-        Enemy theEnemy2 = null;       
-        int category = Greenfoot.getRandomNumber(3);if(category >= 0)
-       {
-           theEnemy2 = theEnemyFactory.EnemyCategory(category);           
-           addObject(theEnemy, getWidth(), Greenfoot.getRandomNumber(600));
-           enemyobjectCount++;
-       }    
-       */
-      
-       //Switch to Next Level - Level 1
+   
     public void createEnemy()
     {
         
