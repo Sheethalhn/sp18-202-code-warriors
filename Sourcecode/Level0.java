@@ -13,14 +13,14 @@ public class Level0 extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    private BlackPanther objectEnemy;
+    private ObjectEnemy objectEnemy;
     private HealthScore healthScore;
     private Rocket rocket;
     private Fire fire;
     private Sword sword;
     //private Switch textButton = null;
     public int count = 0;
-    GreenfootSound backgroundMusic = new GreenfootSound("1.mp3");
+    //GreenfootSound backgroundMusic = new GreenfootSound("marvel.mp3");
     private static final String bgImageName = "Wakanda1.jpg";    //level1
     private static final double scrollSpeed = 5;
     private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
@@ -34,13 +34,13 @@ public class Level0 extends World
     {    
         // Create a new world with 1000x800 cells with a cell size of 1x1 pixels
         
-        super(1000, 600, 1, false);
+        super(1130, 720, 1, false);
         setBackground(bgImageName);
-        backgroundMusic.playLoop();
+        //backgroundMusic.playLoop();
         bgImage = new GreenfootImage(getBackground());
         bgBase = new GreenfootImage(picWidth, getHeight());
         bgBase.drawImage(bgImage, 0, 0);
-        objectEnemy = new BlackPanther();
+        objectEnemy = new ObjectEnemy();
         healthScore =  new HealthScore();
         //setBackground(hero.getCurrentImage());
         
@@ -58,11 +58,11 @@ public class Level0 extends World
         
 
        
-        if(!backgroundMusic.isPlaying())
-        {
-            backgroundMusic.playLoop();
+        //if(!backgroundMusic.isPlaying())
+        //{
+        //    backgroundMusic.playLoop();
         
-        }
+        //}
         scrollPosition -= scrollSpeed;
         while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
         while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
@@ -84,7 +84,31 @@ public class Level0 extends World
         bg.drawImage(bgBase, position, 0);
         bg.drawImage(bgImage, position + picWidth, 0);
     } 
-   
+    /*
+     public void createFire()
+    {
+        FireFactory theFireFactory = new FireFactory();
+        Enemy theEnemy = null;       
+        int category = Greenfoot.getRandomNumber(3);
+       
+           theEnemy = theFireFactory.EnemyCategory(category);           
+           addObject(theEnemy, getWidth(), Greenfoot.getRandomNumber(600));
+           enemyobjectCount++;
+       } 
+    
+    public void createGem()
+    {
+        GemFactory theGemFactory = new GemFactory();
+        Enemy theEnemy2 = null;       
+        int category = Greenfoot.getRandomNumber(3);if(category >= 0)
+       {
+           theEnemy2 = theEnemyFactory.EnemyCategory(category);           
+           addObject(theEnemy, getWidth(), Greenfoot.getRandomNumber(600));
+           enemyobjectCount++;
+       }    
+       */
+      
+       //Switch to Next Level - Level 1
     public void createEnemy()
     {
         
@@ -124,7 +148,7 @@ public class Level0 extends World
            Greenfoot.setWorld(new Restartmenu());
        
     }
-    else if(enemyobjectCount==100)
+    else if(enemyobjectCount==150)
        {
            AppDataPool.getInstance().setHealthScore(healthScore);
            Greenfoot.setWorld(new Level1help());

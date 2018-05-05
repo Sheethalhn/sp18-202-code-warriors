@@ -24,8 +24,8 @@ public class Menu extends World
      */
     public Menu()
     {    
-        super(1000, 600, 1); 
-        backgroundMusic = new GreenfootSound("1.mp3");
+        super(1130, 720, 1); 
+        backgroundMusic = new GreenfootSound("marvel.mp3");
         buttonPlay = new ButtonPlay();
         buttonHelp = new ButtonHelp();
         buttonStory = new ButtonStory();
@@ -48,9 +48,9 @@ public class Menu extends World
      */
     public void prepare()
     {
-        addObject(buttonPlay, 600, 250);
-        addObject(buttonHelp, 600, 350);
-        addObject(buttonStory, 600, 450);        
+        addObject(buttonPlay, 800, 250);
+        addObject(buttonHelp, 800, 350);
+        addObject(buttonStory, 800, 450);        
         buttonPlay.setCommand(playCmd);
         buttonHelp.setCommand(helpCmd);
         buttonStory.setCommand(storyCmd);

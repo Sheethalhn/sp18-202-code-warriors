@@ -8,8 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Star extends Players
 {
+    private GifImage gif = new GifImage("bluestar.gif");
+
    public void act() 
     { 
+        setImage(gif.getCurrentImage());
         String worldname = getWorld().getClass().getName();
         turn(-1);
         setLocation(getX()-8, getY());                            

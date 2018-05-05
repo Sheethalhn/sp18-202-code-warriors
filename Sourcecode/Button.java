@@ -34,14 +34,14 @@ public class Button extends Actor
      */
     public void adjust()
     {
-        if(getX() < (getWorld().getWidth()/2)+420)
+        if(getX() < (getWorld().getWidth()/2)+500)
             move(x);
         else
         {
-            setLocation((getWorld().getWidth()/2)+420, getY());
+            setLocation((getWorld().getWidth()/2)+500, getY());
             if(!playSound)
             {
-                sound.play();
+                //sound.play();
                 playSound  = true;
             }
         }

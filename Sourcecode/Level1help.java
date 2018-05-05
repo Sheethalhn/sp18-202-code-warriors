@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Level1help extends World
 {
    // private static final int GAME_SPEED = 50; 
-    private GreenfootSound backgroundMusic;  
-   // private GifImage gif = new GifImage("blackback.gif");
+   // private GreenfootSound backgroundMusic;  
+    //private GifImage gif = new GifImage("blackback.gif");
     private ButtonPlay buttonPlay;
     private ButtonHelp buttonHelp;
     private PlayCommand playCmd;
@@ -22,8 +22,8 @@ public class Level1help extends World
      */
     public Level1help()  
     {    
-        super(1000, 600, 1); 
-        backgroundMusic = new GreenfootSound("1.mp3");
+        super(1130, 720, 1); 
+       // backgroundMusic = new GreenfootSound("1.mp3");
         buttonPlay = new ButtonPlay();
         buttonHelp = new ButtonHelp();
         playCmd = new PlayCommand();
@@ -34,8 +34,8 @@ public class Level1help extends World
     public void act()
     {
        //setBackground(gif.getCurrentImage());
-       backgroundMusic.playLoop();
-       setBackground(new GreenfootImage("welcomepage.jpg"));
+       //backgroundMusic.playLoop();
+       //setBackground(new GreenfootImage("nextlevel.jpg"));
         //if(Greenfoot.mouseClicked(buttonPlay) && backgroundMusic.isPlaying())
            // backgroundMusic.stop();
     }

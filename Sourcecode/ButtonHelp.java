@@ -27,6 +27,10 @@ public class ButtonHelp extends Button implements ButtonInvoker
     public void act() 
     {
         super.act();
+        String worldname = getWorld().getClass().getName();
+        if(worldname == "Level1help"){
+            setImage(new GreenfootImage("help2.png"));
+        }
     }   
     
     /**

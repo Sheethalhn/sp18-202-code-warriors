@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Restartmenu extends World
 {
     private static final int GAME_SPEED = 50;
-    private GreenfootSound backgroundMusic;  
+    //private GreenfootSound backgroundMusic;  
     //private GifImage gif = new GifImage("blackback.gif");
     private ButtonPlay buttonPlay;
     private ButtonHelp buttonHelp;
@@ -24,8 +24,8 @@ public class Restartmenu extends World
      */
     public Restartmenu()
     {    
-        super(1000, 600, 1); 
-        backgroundMusic = new GreenfootSound("1.mp3");
+        super(1130, 720, 1, false); 
+        //backgroundMusic = new GreenfootSound("1.mp3");
         buttonPlay = new ButtonPlay();
         buttonHelp = new ButtonHelp();
         buttonStory = new ButtonStory();
@@ -38,7 +38,9 @@ public class Restartmenu extends World
     public void act()
     {
        setBackground("bprestart.jpg");
-       backgroundMusic.playLoop();   
+       //backgroundMusic.playLoop();   
+        //if(Greenfoot.mouseClicked(buttonPlay) && backgroundMusic.isPlaying())
+           // backgroundMusic.stop();
     }
     
     /**

@@ -13,10 +13,15 @@ public class ButtonPlay extends Button implements ButtonInvoker
      */
     
     ButtonCommand newButtonCommand;
+    GifImage rocket = new GifImage("rocket.gif");
     
     public void act() 
     {
         super.act();
+        String worldname = getWorld().getClass().getName();
+        if(worldname == "Level1help"){
+            setImage(new GreenfootImage("next.png"));
+        }
     }    
     
     /**

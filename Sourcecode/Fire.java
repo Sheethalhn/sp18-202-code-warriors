@@ -23,7 +23,7 @@ public class Fire extends Players implements Enemy
          
         }
         else if (worldname == "Level1") {
-        setImage(enemy1.getCurrentImage());}  
+            setImage(enemy1.getCurrentImage());}  
         
         setLocation(getX()-8, getY()); 
                               

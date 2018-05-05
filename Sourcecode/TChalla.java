@@ -130,7 +130,7 @@ public class TChalla extends Players implements ISubject, BoostDecorator
             {
             World  world =  this.getWorld();
             Weapon sword = new Weapon();
-            world.addObject(sword, this.getX()+this.getImage().getWidth()/2+20   , this.getY()); 
+            world.addObject(sword, this.getX()+this.getImage().getWidth()/2+20, this.getY()); 
             //Greenfoot.playSound("SwordThrow.wav ");
             counter.timer();
             isSwordscore = true;

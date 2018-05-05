@@ -20,7 +20,7 @@ public class Level1 extends World
     private Sword sword;
     private Star star;
     public int count = 0;
-    GreenfootSound backgroundMusic = new GreenfootSound("1.mp3");
+    //GreenfootSound backgroundMusic = new GreenfootSound("1.mp3");
     private static final String bgImageName = "wakanda2.jpg";    //level1
     private static final double scrollSpeed = 5;
     private static final int picWidth = (new GreenfootImage(bgImageName)).getWidth();
@@ -29,13 +29,12 @@ public class Level1 extends World
     private int counter = 0;
     private HealthScore healthScore;
 
-
     public Level1()
     {    
         // Create a new world with 1000x800 cells with a cell size of 1x1 pixels
-        super(1000, 600, 1, false);
+        super(1130, 720, 1);
         setBackground(bgImageName);
-        backgroundMusic.playLoop();
+        //backgroundMusic.playLoop();
         bgImage = new GreenfootImage(getBackground());
         bgBase = new GreenfootImage(picWidth, getHeight());
         bgBase.drawImage(bgImage, 0, 0);
@@ -60,13 +59,12 @@ public class Level1 extends World
     }
    
     public void act() { 
-        long count = 0;
         
-        if(!backgroundMusic.isPlaying())
-        {
-            backgroundMusic.playLoop();
+        //if(!backgroundMusic.isPlaying())
+        //{
+        //    backgroundMusic.playLoop();
         
-        }
+        //}
         scrollPosition -= scrollSpeed;
         while(scrollSpeed > 0 && scrollPosition < -picWidth) scrollPosition += picWidth;
         while(scrollSpeed < 0 && scrollPosition > 0) scrollPosition -= picWidth;
@@ -105,7 +103,7 @@ public class Level1 extends World
                 tChalla.restartGame();
         }
     }
-    }
+}
     
     private void paint(int position)
     {
@@ -142,11 +140,6 @@ public class Level1 extends World
             //return newEnemy;   
         }        
          addObject((Players)theEnemy, getWidth(), Greenfoot.getRandomNumber(600)); 
-  
        }  
-
-
-        
-    }
-   
+    } 
 }
