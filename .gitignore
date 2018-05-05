@@ -8,3 +8,5 @@
 /Sourcecode/*.class
 /Sourcecode/*.ctxt
 
+.DS_Store
+Sourcecode/.DS_Store
