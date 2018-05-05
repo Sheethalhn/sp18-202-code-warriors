@@ -36,8 +36,6 @@ When sword score reaches zero, Blackpanther is unable to attack with swords. (He
 
 3.  What are the current blockers/challenges the team is facing? Team is not facing any issues.
 
-XP Core Value - Communication
-
 ## Week 3 (4/21/2017): Minutes of the meeting
 
 1.  What did the team do the past week? The team implemented Factory method pattern to generate multiple enemies ,decorator pattern where fighter gets his weapons after certain  score is reached and command pattern for the game Menu.
@@ -45,8 +43,6 @@ XP Core Value - Communication
 2.  What is the team going to do next week? The team decided to implement State pattern and a initial level where our fighter has to collect heart crystals to increase his health and collect swords to fight against enemies in next level.Decided to implement attack by hero on his enemies.  
 
 3.  What are the current blockers/challenges the team is facing? Team is facing code integration issues.
-
-XP Core Value - Respect
 
 
 ## Week 2 (4/14/2017): Minutes of the meeting
@@ -57,8 +53,6 @@ XP Core Value - Respect
 
 3.  What are the current blockers/challenges the team is facing? Team is facing code integration issues.
 
-XP Core Value - Communication
-
 
 ## Week 1 (4/2/2017): Minutes of the meeting
 
@@ -67,6 +61,3 @@ XP Core Value - Communication
 2.  What is the team going to do next week? The team have to come up with game idea and use cases. Decided to develop a simple game on Greenfoot to get a better understanding on how it works.
 
 3.  What are the current blockers/challenges the team is facing? Game Development is a new concept for everyone and have to learn Greenfoot for this project.
-
-XP Core Value - Courage
-
