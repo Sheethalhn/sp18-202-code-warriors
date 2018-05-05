@@ -30,10 +30,14 @@ public class ScoreBoard extends Actor implements IObserver
         //GreenfootImage scoreBoardImage = getImage();
         //scoreBoardImage.scale(scoreBoardImage.getWidth(), scoreBoardImage.getHeight());
         //setImage(scoreBoardImage);
+        //setImage(new GreenfootImage("SCORE", 50, Color.ORANGE, Color.BLACK));
     }
     public void act() 
     {
         showScore();
+        GreenfootImage scoreBoardImage = getImage();
+        scoreBoardImage.clear();
+        
     }    
     public void showScore()
     {

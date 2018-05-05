@@ -18,13 +18,12 @@ public class HealthScore extends Actor implements IObserver
     public HealthScore() {
         health = 0;
         sword = 0;
-        //GreenfootImage scoreBoardImage = getImage();
-        //scoreBoardImage.scale(scoreBoardImage.getWidth(), scoreBoardImage.getHeight());
-        //setImage(scoreBoardImage);
     }
     public void act() 
     {
         showHealth();
+        GreenfootImage healthImage = getImage();
+        healthImage.clear();
     }    
     private void showHealth()
     {

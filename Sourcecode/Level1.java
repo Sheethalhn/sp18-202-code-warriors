@@ -48,7 +48,7 @@ public class Level1 extends World
         star = new Star();
         addObject(tChalla, 100, 200);
         addObject(scoreBoard, 850, 35);
-        addObject(healthScore,750,35);
+        addObject(healthScore,750, 35);
         scoreBoard.attach(tChalla);
         
         healthScore.attach(tChalla);

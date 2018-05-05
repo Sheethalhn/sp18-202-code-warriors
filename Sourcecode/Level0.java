@@ -49,7 +49,7 @@ public class Level0 extends World
         rocket = new Rocket();
         //textButton = new Switch("SwitchMode");
         addObject(objectEnemy, 100, 200);
-        addObject(healthScore, 850, 35);
+        addObject(healthScore, 100, 35);
         //addObject(textButton, 600, 35);
         healthScore.attach(objectEnemy);
         objectEnemy.registerObserver(healthScore);

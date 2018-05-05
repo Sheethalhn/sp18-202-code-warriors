@@ -33,6 +33,6 @@ public class WinGameState implements IBlackPantherState
     public void display()
     {
     	//System.out.println("Win Score acheived - Win and End Game");
-        tchalla.getWorld().addObject(new GameOverScreen("wakanda-forever.png"),520,200);
+        tchalla.getWorld().addObject(new GameOverScreen("wakanda-forever.png"),520,400);
     }
 }
