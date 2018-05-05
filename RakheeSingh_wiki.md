@@ -24,7 +24,7 @@ Implemented the movements of the actor Black Panther.
 **Week 4**
 04/28/2018 Implemeted State Design Pattern for Game End logic. If health is zero then players loses and game ends, If score reaches 200 then player wins and game ends. Created State pattern class diagram and Acitivity diagram. Will be working with the team on presentation of the game demo. Will have a quick sprint retrospective meeting and document it.
 
-**XP core value - Courage** : Tema maintained persistence throughout the sprint and acheived desired results. We were stuck with a few issues for a while but overcame it with persistent effort to break through the issue.
+**XP core value - Courage** : Team maintained persistence throughout the sprint and acheived desired results. We were stuck with a few issues for a while but overcame it with persistent effort to break through the issue.
 
 05/02/2018 Made changes to State pattern to have restart/play game state when player loses. Changed images suitably.
 
